@@ -17,7 +17,7 @@
     padding: 2rem;
     box-shadow: 0px 0px 30px 0px #333;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
   }
 
@@ -25,6 +25,8 @@
   .logo img {
     height: 50px; /* Adjust height according to your design */
     margin-right: 20px; /* Space between logo and nav items */
+    margin-left: 0 auto;
+
 }
 
   .dashboard-devide {
@@ -662,35 +664,49 @@ p {
 }
 
 /* Portfolio Items */
+.portfolio {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center; /* Center the portfolio items */
+    padding: 2em;
+    margin: 2em 0;
+   
+}
+
 .portfolio-item {
     flex: 1 1 calc(25% - 2em); /* Adjust the width of items */
     margin: 1em; /* Space between items */
     border-radius: 8px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    padding: 1em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    padding: 1.5em; /* Padding inside the card */
     text-align: center;
-    transition: transform 0.2s; /* Smooth hover effect */
-    border: 1px solid orange;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+    border: 1px solid black; 
+   
 }
 
 .portfolio-item img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 50%;
 }
 
 .portfolio-item h3 {
     margin: 0.5em 0;
     color: orange;
+    font-size: 1.5rem; /* Slightly larger font size */
 }
 
 .portfolio-item p {
     color: #e1e1e1;
+    font-size: 1rem; /* Set a specific font size for better readability */
 }
 
 /* Hover effect */
 .portfolio-item:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    border-color: orange; /* Change border color on hover */
 }
 
 /* Responsive Styles */
@@ -703,32 +719,56 @@ p {
 @media (max-width: 480px) {
     .portfolio-item {
         flex: 1 1 100%; /* Full width on small screens */
+        margin: 0.5em 0; /* Adjust margin for smaller screens */
+        padding: 1em; /* Adjust padding for smaller screens */
+    }
+
+    .portfolio-item h3 {
+        font-size: 1.25rem; /* Adjust font size for smaller screens */
+    }
+
+    .portfolio-item p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
     }
 }
 
-/* Team Section */
 .team {
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap; /* Allow team members to wrap onto the next line */
+    justify-content: center; /* Center the team members */
     padding: 2em;
     margin: 2em 0;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    ; /* Light background for contrast */
 }
 
 .team h2 {
     text-align: center;
     margin-bottom: 1em;
     color: orange;
+    width: 100%; /* Full width for heading */
 }
 
 .team-member {
+ /* White background for card effect */
+    border-radius: 8px;
+    border: 1px solid black;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin: 1em;
+    padding: 1.5em; /* Padding inside the card */
     text-align: center;
-    margin: 1em 0;
-    align-items: center;
+    flex: 1 1 calc(25% - 2em); /* Responsive width for larger screens */
+    transition: transform 0.3s; /* Smooth transform effect */
 }
 
-.team-member h3  {
+.team-member:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.team-member h3 {
     color: orange;
+    margin: 0.5em 0; /* Margin for spacing */
 }
 
 .team-member img {
@@ -736,6 +776,21 @@ p {
     width: 120px;
     height: 120px;
     object-fit: cover;
+    margin-bottom: 1em; /* Space below image */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .team-member {
+        flex: 1 1 calc(50% - 2em); /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        flex: 1 1 100%; /* Full width on small screens */
+        margin: 0.5em 0; /* Adjust margin for smaller screens */
+    }
 }
 
 /* FAQs Section */
