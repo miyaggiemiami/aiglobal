@@ -6,136 +6,173 @@
   
   body {
     font-family: 'Barlow Condensed', sans-serif;
-    background-color: #121212;
+    background-color: #e6e6e6;
     line-height: 1.6;
     
   }
 
 
-.header {
+  header {
     background-color: whitesmoke;
-    padding: 2rem;
+    padding: 1rem; /* Adjusted padding for better fit */
     box-shadow: 0px 0px 30px 0px #333;
     display: flex;
     justify-content: space-between;
-
-  }
-
-
-  .logo img {
-    height: 50px; /* Adjust height according to your design */
-    margin-right: 20px; /* Space between logo and nav items */
-    margin-left: 0 auto;
-
+    align-items: center; /* Ensures vertical alignment */
+    height: 80px;
 }
 
-  .dashboard-devide {
+#heading {
+    color: orange;
+    font-size:100px;
+    margin-bottom: 0;
+    line-height: 100px;
+    width: 400px;
+}
+
+.hero-desc {
+    color: #333;
+    width: 500px;
+    font-size: 20px;
+}
+
+.logo img {
+    height: 40px; /* Reduced height for smaller screens */
+    margin-right: 20px; /* Space between logo and nav items */
+}
+
+.dashboard-devide {
     border-color: #333;
     border-style: solid;
     margin-right: 20px;
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-  }
-  
-  nav ul {
+    flex-grow: 1; /* Allows nav to use available space */
+}
+
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  nav ul li {
+    justify-content: flex-end; /* Aligns nav items to the right */
+}
+
+nav ul li {
     margin-right: 20px;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 18px;
+    font-size: 16px; /* Adjusted font size for better fit */
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     transition: color 0.2s ease;
-  }
-  
-  nav ul li a:hover {
+}
+
+nav ul li a:hover {
     color: #333;
-  }
-  
-  nav ul li a.active {
+}
+
+nav ul li a.active {
     color: #fff;
     border-bottom: 2px solid #fff;
-  }
+}
 
-  .log-in a{
+.log-in a {
     color: #333;
     text-align: right;
-  }
+}
 
-  .hamburger {
+.hamburger {
     display: none;
     cursor: pointer;
-  }
-  
-  .hamburger span {
+}
+
+.hamburger span {
     display: block;
     width: 30px;
     height: 2px;
-    background-color: #333;
+    background-color: orange;
     margin-bottom: 5px;
     transition: transform 0.2s ease;
-  }
-  
-  .hamburger span:last-child {
+}
+
+.hamburger span:last-child {
     margin-bottom: 0;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
+}
+
+/* Responsive design */
+/* Updated styles for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem; /* Reduced padding for a sleeker look */
+        height: 60px; /* Reduced height for a more compact header */
+    }
+    
+    .logo {
+        display: none; /* Keep logo hidden on small screens */
+    }
+    
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start; /* Align items to the left */
+        width: 100%; /* Full width for nav */
+    }
+    
     nav ul {
-      display: none;
+        display: none; /* Keep dropdown hidden by default */
+        flex-direction: column; /* Stack nav items vertically */
+        width: 100%; /* Full width for dropdown */
+        position: absolute; /* Positioning for dropdown */
+        background-color: whitesmoke; /* Match header background */
+        top: 60px; /* Position below the header */
+        left: 0;
+        z-index: 10; /* Ensure it appears above other content */
+        padding: 10px 0; /* Add padding for better spacing */
     }
+    
+    nav ul li {
+        margin: 10px 0; /* Add vertical margin for spacing */
+        width: 100%; /* Full width for nav items */
+        text-align: center; /* Center align nav items */
+    }
+    
+    nav ul li a {
+        font-size: 18px; /* Slightly larger font size for readability */
+        padding: 10px 20px; /* Add padding for clickable area */
+        display: block; /* Make the entire area clickable */
+        transition: background-color 0.2s ease; /* Smooth background transition */
+    }
+    
+    nav ul li a:hover {
+        background-color: #f0f0f0; /* Change background on hover for better feedback */
+    }
+    
     .hamburger {
-      display: block;
+        display: block; /* Show hamburger icon */
+        margin-left: auto; /* Align hamburger to the right */
+        padding: 10px; /* Add padding for better touch target */
     }
-  }
-  
-  .hamburger.active span:first-child {
-    transform: translateY(7px) rotate(45deg);
-  }
-  
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger.active span:last-child {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-  
-  .hamburger.active + ul {
-    display: block;
-  }
-  
-  .active {
-    display: block;
-  }
+    
+    .hamburger.active + ul {
+        display: flex; /* Show the dropdown as a flex container */
+    }
+}
 
-  h1, h2, h3 {
-    font-weight: 600; /* Use a bolder weight for headings */
-  }
+.active {
+    display: block;
+}
 
-  p {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
-  }
  
 
   
@@ -147,10 +184,17 @@
   
   .hero {
     display: flex;
-    min-height: 80vh;
-    color: white;
+    min-height: 80vh; /* Minimum height for larger screens */
+    color: red;
     position: relative;
-    padding: 2rem;
+    padding: 2rem; /* Padding for larger screens */
+    flex-direction: column; /* Stack content vertically on small screens */
+    justify-content: center; /* Center content vertically */
+    text-align: start; /* Center text for better appearance */
+}
+
+.hero h1 {
+    color: red;
 }
 
 .hero::before {
@@ -161,78 +205,76 @@
     width: 100%;
     height: 100%;
     background-image: url(./images/orange-robot-4.png);
-    background-size: contain;
-    background-position: right center;
+    background-size: contain; /* Changed to cover for better responsiveness */
+    background-position:right center; /* Center the background image */
     background-repeat: no-repeat;
-    filter: blur(7px); /* Blur the background image */
+    filter: blur(13px); /* Blur the background image */
     z-index: -1; /* Ensure the blurred background is behind the content */
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   
-    z-index: -1; /* Ensure the overlay is behind the content */
-}
-  
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    
-  }
-  
-  .hero-content {
-    flex: 1;
+.hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 2;
-    max-width: 600px;
-    margin-left: 2rem;
-  }
-  
-  .hero h1 {
-    font-size: 4rem;
-    margin-bottom: 5px;
-    text-align: start;
-    color: white;
-    
-  }
-  
-  .hero h2 {
-    text-align: start;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 2rem;
+    max-width: 90%; /* Use a percentage for better responsiveness */
+    margin: 0 auto; /* Center the content */
+    padding: 1rem; /* Add some padding for smaller screens */
+}
 
-  }
-  
-  .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    line-height: 1.2;
-    text-align: start;
-    font-weight: lighter;
-    letter-spacing: 1;
+.hero h1 {
+    font-size: 4rem; /* Large font size for larger screens */
+    margin-bottom: 0.5rem; /* Adjusted margin */
+    color: white;
+}
+
+.hero h2 {
     font-family: 'Barlow Condensed', sans-serif;
-  }
-  
-  @media (max-width: 768px) {
+    font-size: 2.5rem; /* Slightly larger for better visibility */
+    margin-bottom: 1rem; /* Space below the h2 */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Base font size */
+    margin-bottom: 2rem; /* Space below the paragraph */
+    line-height: 1.4; /* Increased line height for readability */
+    font-weight: lighter;
+    letter-spacing: 0.5px; /* Reduced letter spacing */
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 1rem; /* Reduced padding on smaller screens */
+    }
+    
     .hero h1 {
-      font-size: 3rem;
+        font-size: 3rem; /* Smaller font size for smaller screens */
     }
+    
+    .hero h2 {
+        font-size: 2rem; /* Smaller font size for h2 */
+    }
+    
     .hero p {
-      font-size: 1.2rem;
+        font-size: 1.2rem; /* Smaller font size for paragraph */
     }
-  }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Further reduce font size on very small screens */
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem; /* Further reduce h2 size */
+    }
+    
+    .hero p {
+        font-size: 1rem; /* Further reduce paragraph size */
+    }
+}
   
   .grid-container {
     display: grid;
@@ -280,7 +322,7 @@ margin-bottom: 4em;
   .about-content h2{
     color: white;
     margin-bottom: 10px;
-    color: ;
+    color:orange ;
   }
 
   .about-content p {
@@ -296,7 +338,7 @@ margin-bottom: 4em;
     margin: 20px;
     display: block; /* Ensures images are displayed as block elements */
     position: relative; /* Required for the transform to work */
-    animation: moveUpDown 3s ease-in-out infinite; /* Adjust duration as needed */
+    animation: moveUpDown 2.5s ease-in-out infinite; /* Adjust duration as needed */
   }
 
   @keyframes moveUpDown {
@@ -304,7 +346,7 @@ margin-bottom: 4em;
         transform: translateY(0); /* Start and end at the original position */
     }
     50% {
-        transform: translateY(-10px); /* Move up slightly */
+        transform: translateY(-20px); /* Move up slightly */
     }
 }
   
