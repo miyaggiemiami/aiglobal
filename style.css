@@ -6,7 +6,7 @@
   
   body {
     font-family: 'Barlow Condensed', sans-serif;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(20, 20, 20);
     line-height: 1.6;
     
   }
@@ -225,7 +225,7 @@ nav ul li a.active {
     padding: 50px; /* Add padding for spacing */
      /* Center the content horizontally */
     box-sizing: border-box; /* Include padding in the element's total width and height */
-    background-color: #f9f9f9; /* Light background for contrast */
+    /* Light background for contrast */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
@@ -337,7 +337,7 @@ margin-bottom: 4em;
   }
 
   .about-content p {
-    color: #d2d2d2;
+    color: #cacaca;
     margin-bottom: 20px;
   }
 
@@ -422,7 +422,7 @@ margin-bottom: 4em;
 
 .price-box {
     border: 1px solid orange;
-    color: white; /* Text color */
+    color: #cacaca; /* Text color */
     border-radius: 10px; /* Rounded corners */
     padding: 20px; /* Add padding */
     margin: 10px; /* Space between boxes */
@@ -513,8 +513,7 @@ margin-bottom: 4em;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     max-width: 900px;
-    margin: auto;
-    color: #ffffff; /* White text for readability */
+    margin: auto; /* White text for readability */
 
 }
 .vision-mission-content {
@@ -529,12 +528,12 @@ margin-bottom: 4em;
     padding: 25px;
  /* Slightly lighter background for boxes */
     
-     rgba(255, 166, 0, 0.395);
+    
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .vision:hover {
     transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 4px 20px rgba(255, 166, 0, 0.295); /* Stronger shadow on hover */
+    box-shadow: 0 4px 10px rgba(255, 166, 0, 0.199); /* Stronger shadow on hover */
 }
 h2 {
     color: #ffcc00; /* Bright accent color for headings */
@@ -542,7 +541,7 @@ h2 {
     margin-bottom: 15px;
 }
 p {
-    color: #e0e0e0; /* Light gray for paragraph text */
+    color: #cacaca; /* Light gray for paragraph text */
     font-family: 'Arial', sans-serif;
     line-height: 1.7;
 }
@@ -550,7 +549,7 @@ p {
     margin-top: 40px;
     text-align: center;
     font-family: 'Arial', sans-serif;
-    border-top: 1px solid #ffcc00; /* Top border for separation */
+  
     padding-top: 20px;
 }
 
@@ -753,7 +752,7 @@ p {
     padding: 1.5em; /* Padding inside the card */
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
-    border: 1px solid orange; 
+    background-color: ; 
    
 }
 
@@ -817,7 +816,7 @@ p {
 
 .team h2 {
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 1em;
     color: orange;
     width: 100%; /* Full width for heading */
 }
@@ -831,7 +830,7 @@ p {
     text-align: center;
     flex: 1 1 calc(25% - 2em); /* Responsive width for larger screens */
     transition: transform 0.3s; /* Smooth transform effect */
-    background-color: white;
+    background-color: #1a1a1a;
    
 }
 
