@@ -6,9 +6,13 @@
   
   body {
     font-family: 'Barlow Condensed', sans-serif;
-    background-color: #e6e6e6;
+    background-color: rgb(241, 241, 241);
     line-height: 1.6;
     
+  }
+
+  h2 {
+    font-size: 20px;
   }
 
 
@@ -30,10 +34,16 @@
     width: 400px;
 }
 
+.sub-heading {
+    color: orange;
+    font-weight: 150;
+}
+
 .hero-desc {
     color: #333;
     width: 500px;
     font-size: 20px;
+    font-weight: 100;
 }
 
 .logo img {
@@ -173,9 +183,6 @@ nav ul li a.active {
     display: block;
 }
 
- 
-
-  
   .container {
     width: 100%;
     padding: 10px;
@@ -184,17 +191,15 @@ nav ul li a.active {
   
   .hero {
     display: flex;
-    min-height: 80vh; /* Minimum height for larger screens */
-    color: red;
-    position: relative;
-    padding: 2rem; /* Padding for larger screens */
     flex-direction: column; /* Stack content vertically on small screens */
-    justify-content: center; /* Center content vertically */
-    text-align: start; /* Center text for better appearance */
+    min-height: 80vh; /* Minimum height for larger screens */
+    position: relative;
 }
 
-.hero h1 {
-    color: red;
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row; /* Change to horizontal stacking on larger screens */
+    }
 }
 
 .hero::before {
@@ -214,18 +219,22 @@ nav ul li a.active {
 
 .hero-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 2;
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: flex-start; /* Align items at the start */
     max-width: 90%; /* Use a percentage for better responsiveness */
-    margin: 0 auto; /* Center the content */
-    padding: 1rem; /* Add some padding for smaller screens */
+    padding: 50px; /* Add padding for spacing */
+     /* Center the content horizontally */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.hero h1 {
-    font-size: 4rem; /* Large font size for larger screens */
-    margin-bottom: 0.5rem; /* Adjusted margin */
-    color: white;
+/* Optional: Add a media query for better responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 30px; /* Reduce padding on smaller screens */
+    }
 }
 
 .hero h2 {
@@ -294,9 +303,11 @@ nav ul li a.active {
   .btn {
 
     text-decoration: none;
-    border: 1px solid orange;
+    background-color: orange;
     padding: 10px 20px;
-    color: orange;
+    color: white;
+    font-size: 20px;
+    font-weight: ;
     width: 180px;
     text-align: center;
     border-radius: 7px;
@@ -452,6 +463,25 @@ margin-bottom: 4em;
 
 .price-box li:hover {
     border-bottom: 1px solid orange; /* Lighter background on hover */
+}
+
+.price-container {
+    text-align: center; /* Center the price */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+.price {
+    font-size: 2rem; /* Increase font size for a modern look */
+    font-weight: bold; /* Keep the bold weight */
+    color: orange; /* Dark gray color for modern aesthetics */
+    display: inline-block; /* Allow for inline styling */
+}
+
+.abbreviation {
+    font-size: 1rem; /* Smaller font size for the abbreviation */
+    font-weight: normal; /* Normal weight for the abbreviation */
+    color: orange; /* Lighter gray color for contrast */
+    margin-left: 5px; /* Space between price and abbreviation */
 }
 
 /* Responsive Styles */
@@ -723,7 +753,7 @@ p {
     padding: 1.5em; /* Padding inside the card */
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
-    border: 1px solid black; 
+    border: 1px solid orange; 
    
 }
 
@@ -787,21 +817,28 @@ p {
 
 .team h2 {
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 0;
     color: orange;
     width: 100%; /* Full width for heading */
 }
 
 .team-member {
  /* White background for card effect */
-    border-radius: 8px;
-    border: 1px solid black;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.195); /* Shadow for depth */
     margin: 1em;
     padding: 1.5em; /* Padding inside the card */
     text-align: center;
     flex: 1 1 calc(25% - 2em); /* Responsive width for larger screens */
     transition: transform 0.3s; /* Smooth transform effect */
+    background-color: white;
+   
+}
+
+.team-member p {
+    color: #787878;
+    font-size: 16px;
+    font-weight: 300px;
 }
 
 .team-member:hover {
@@ -811,6 +848,7 @@ p {
 .team-member h3 {
     color: orange;
     margin: 0.5em 0; /* Margin for spacing */
+    font-size: 18px;
 }
 
 .team-member img {
@@ -818,7 +856,7 @@ p {
     width: 120px;
     height: 120px;
     object-fit: cover;
-    margin-bottom: 1em; /* Space below image */
+
 }
 
 /* Responsive Styles */
