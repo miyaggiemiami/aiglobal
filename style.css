@@ -40,7 +40,7 @@
 }
 
 .hero-desc {
-    color: #333;
+    color: #cacaca;
     width: 500px;
     font-size: 20px;
     font-weight: 100;
@@ -533,7 +533,7 @@ margin-bottom: 4em;
 }
 .vision:hover {
     transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 4px 10px rgba(255, 166, 0, 0.199); /* Stronger shadow on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.441); /* Stronger shadow on hover */
 }
 h2 {
     color: #ffcc00; /* Bright accent color for headings */
