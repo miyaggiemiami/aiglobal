@@ -16,6 +16,7 @@ body {
     height: 100vh;
 }
 
+
 /*navbar style*/
 .header {
     width: 100%;
@@ -417,11 +418,18 @@ p {
 }
 
 #testimonials-heading{
+    font-size: 3rem;
     text-align: center;
     margin-top: 3em;
     margin-bottom: 20px;
-    color: ;
+    color: white;
+} @media (max-width: 768px) {
+    #testimonials-heading {
+        font-size: 2rem;
+    }
 }
+
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -473,6 +481,11 @@ cite {
     border: 1px solid #ff6600;
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+}
+
+.portfolio-item a {
+    text-decoration: none; /* Remove underline from links */
+    outline: none; /* Remove outline on focus */
 }
 
 .portfolio h2 {
@@ -532,6 +545,7 @@ cite {
     font-size: 0.9em; /* Font size for description */
     color: #dddddd; /* Light gray color for text */
     margin: 0; /* Remove default margin */
+    text-decoration: none;
 }
 
 /* Responsive Styles */
