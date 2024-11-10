@@ -336,10 +336,6 @@ ul li a:hover {
     transform: translateY(-5px); /* Lift effect on hover */
 }
 
-p {
-    color: whitesmoke; /* Slightly lighter text color for paragraphs */
-    line-height: 1.6; /* Increased line height for readability */
-}
 
 @media (max-width: 768px) {
     .vision-mission-content {
@@ -565,11 +561,194 @@ cite {
     }
 }
 
-.team {
-    margin: 20px 0; /* Add spacing above and below */
-    clear: both; /* Clear any floats */
-    background-color: green;
-}
 /*team section*/
 
+.team {
+    max-width: 1200px;
+    margin: 40px auto; /* Center the section */
+    padding: 20px ; /* Padding around the section */
+    text-align: center; /* Center the heading */
+}
 
+
+.name {
+    color: white;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: space-between; /* Distribute space between cards */
+    gap: 20px; /* Space between cards */
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with space */
+    background: linear-gradient(135deg, #13131300, #ff6600);
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    position: relative; /* Position for child elements */
+    overflow: hidden; /* Hide overflow */
+    text-align: center; /* Center text */
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.profile-pic {
+    width: 120px; /* Profile picture size */
+    height: 120px; /* Profile picture size */
+    object-fit: cover;
+    border-radius: 50%; /* Circular profile picture */
+    margin: 20px auto; /* Center the image */
+    border: 1px solid white /* Border for profile picture */
+}
+
+.card-back {
+    background: #ff6600; /* Back background */
+    color: white; /* Text color for back
+        color: white; /* Text color for back */
+        padding: 20px; /* Padding for back content */
+        border-radius: 10px; /* Rounded corners */
+        position: absolute; /* Position the back card */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        right: 0; /* Align to the right */
+        bottom: 0; /* Align to the bottom */
+        display: flex; /* Use flexbox for alignment */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        opacity: 0; /* Hide back card initially */
+        transition: opacity 0.3s; /* Smooth transition for opacity */
+    }
+    
+    .card:hover .card-back {
+        opacity: 1; /* Show back card on hover */
+    }
+    
+    .card:hover .profile-pic {
+        transform: scale(1.1); /* Slightly enlarge profile picture on hover */
+    }
+    
+    @media (max-width: 768px) {
+        .card {
+            flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .card {
+            flex: 1 1 100%; /* 1 card per row on small screens */
+        }
+    
+        h2 {
+            font-size: 2rem; /* Smaller heading size on mobile */
+        }
+    }
+
+    /*pricing section*/
+    .wrapper {
+        max-width: 900px; /* Set a maximum width */
+        margin: 5% auto; /* Center the wrapper */
+        padding: 0 15px; /* Add some padding */
+        display: flex; /* Use flexbox for layout */
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: space-between; /* Space between items */
+    }
+    
+    .single-price {
+        flex: 1 1 calc(33.333% - 20px); /* Default to 3 items per row with some space */
+        background: linear-gradient(135deg, rgba(19, 19, 19, 0), #ff6600);
+        margin: 2% 1%; /* Add margin for spacing */
+        box-shadow: 0 0 8px #333;
+        text-align: center;
+        transition: 0.9s;
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Align items in a column */
+        align-items: center; /* Center items horizontally */
+        padding: 20px; /* Add padding for inner spacing */
+        border-radius: 8px; /* Rounded corners */
+    }
+    
+    .price {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 2px solid #333;
+        margin: 5% auto 0 auto;
+        display: flex; /* Use flexbox for centering */
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+    }
+    
+    .deals {
+        margin-top: 10%;
+    }
+    
+    .single-price h1 {
+        font-size: 1.2rem; /* Use rem for scalability */
+        color: white;
+        line-height: 1.5; /* Adjust line height */
+        text-transform: uppercase;
+    }
+    
+    .price h2 {
+        font-size: 2.4rem; /* Use rem for scalability */
+        color: white;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .wrapper {
+            padding: 0 10px; /* Reduce padding */
+        }
+    
+        .single-price {
+            flex: 1 1 100%; /* Stack items vertically on smaller screens */
+            margin: 2% 0; /* More margin for spacing */
+        }
+    
+        .price {
+            width: 80px; /* Adjust size for smaller screens */
+            height: 80px;
+        }
+    
+        .single-price h1 {
+            font-size: 1rem; /* Adjust font size */
+        }
+    
+        .price h2 {
+            font-size: 2rem; /* Adjust font size */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .wrapper {
+            padding: 0 5px; /* Further reduce padding */
+        }
+    
+        .single-price {
+            flex: 1 1 100%; /* Allow single price to take full width */
+            margin: 5% 0; /* More margin for spacing */
+        }
+    
+        .price {
+            width: 60px; /* Further adjust size */
+            height: 60px;
+        }
+    
+        .single-price h1 {
+            font-size: 0.9rem; /* Further adjust font size */
+        }
+    
+        .price h2 {
+            font-size: 1.6rem; /* Further adjust font size */
+        }
+    }
+
+
+
+    
