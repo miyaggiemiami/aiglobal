@@ -2,1010 +2,340 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  body {
-    font-family: 'Barlow Condensed', sans-serif;
-    background-color: rgb(20, 20, 20);
-    line-height: 1.6;
+}
+
+body {
+    background-color:rgb(14, 14, 14) ;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+/*navbar style*/
+.header {
+    width: 100%;
+    background-color: white;
+    color: rgb(14, 14, 14);
+    padding: 10px 20px;
+    position: fixed;
+    overflow: hidden;
     
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-
-  header {
-    background-color: whitesmoke;
-    padding: 1rem; /* Adjusted padding for better fit */
-    box-shadow: 0px 0px 30px 0px #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Ensures vertical alignment */
-    height: 80px;
-}
-
-#heading {
-    color: orange;
-    font-size:100px;
-    margin-bottom: 0;
-    line-height: 100px;
-    width: 400px;
-}
-
-.sub-heading {
-    color: orange;
-    font-weight: 150;
-}
-
-.hero-desc {
-    color: #cacaca;
-    width: 500px;
-    font-size: 20px;
-    font-weight: 100;
-}
-
-.logo img {
-    height: 40px; /* Reduced height for smaller screens */
-    margin-right: 20px; /* Space between logo and nav items */
-}
-
-.dashboard-devide {
-    border-color: #333;
-    border-style: solid;
-    margin-right: 20px;
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    margin: 0 auto;
-    flex-grow: 1; /* Allows nav to use available space */
+    justify-content: space-between;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end; /* Aligns nav items to the right */
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px; /* Adjusted font size for better fit */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
-    transition: color 0.2s ease;
-}
-
-nav ul li a:hover {
-    color: #333;
-}
-
-nav ul li a.active {
-    color: #fff;
-    border-bottom: 2px solid #fff;
-}
-
-.log-in a {
-    color: #333;
-    text-align: right;
+.logo img {
+    max-height: 50px; /* Adjust as needed */
 }
 
 .hamburger {
-    display: none;
+    display: none; /* Hidden on larger screens */
     cursor: pointer;
 }
 
 .hamburger span {
     display: block;
-    width: 30px;
-    height: 2px;
-    background-color: orange;
-    margin-bottom: 5px;
-    transition: transform 0.2s ease;
+    width: 25px;
+    height: 3px;
+    background-color:rgb(14, 14, 14);
+    margin: 5px;
 }
 
-.hamburger span:last-child {
-    margin-bottom: 0;
-}
-
-/* Responsive design */
-/* Updated styles for smaller screens */
-@media (max-width: 768px) {
-    header {
-        padding: 0.5rem; /* Reduced padding for a sleeker look */
-        height: 60px; /* Reduced height for a more compact header */
-    }
-    
-    .logo {
-        display: none; /* Keep logo hidden on small screens */
-    }
-    
-    nav {
-        flex-direction: column; /* Stack nav items vertically */
-        align-items: flex-start; /* Align items to the left */
-        width: 100%; /* Full width for nav */
-    }
-    
-    nav ul {
-        display: none; /* Keep dropdown hidden by default */
-        flex-direction: column; /* Stack nav items vertically */
-        width: 100%; /* Full width for dropdown */
-        position: absolute; /* Positioning for dropdown */
-        background-color: whitesmoke; /* Match header background */
-        top: 60px; /* Position below the header */
-        left: 0;
-        z-index: 10; /* Ensure it appears above other content */
-        padding: 10px 0; /* Add padding for better spacing */
-    }
-    
-    nav ul li {
-        margin: 10px 0; /* Add vertical margin for spacing */
-        width: 100%; /* Full width for nav items */
-        text-align: center; /* Center align nav items */
-    }
-    
-    nav ul li a {
-        font-size: 18px; /* Slightly larger font size for readability */
-        padding: 10px 20px; /* Add padding for clickable area */
-        display: block; /* Make the entire area clickable */
-        transition: background-color 0.2s ease; /* Smooth background transition */
-    }
-    
-    nav ul li a:hover {
-        background-color: #f0f0f0; /* Change background on hover for better feedback */
-    }
-    
-    .hamburger {
-        display: block; /* Show hamburger icon */
-        margin-left: auto; /* Align hamburger to the right */
-        padding: 10px; /* Add padding for better touch target */
-    }
-    
-    .hamburger.active + ul {
-        display: flex; /* Show the dropdown as a flex container */
-    }
-}
-
-.active {
-    display: block;
-}
-
-  .container {
-    width: 100%;
-    padding: 10px;
-    
-  }
-  
-  .hero {
+ul {
     display: flex;
-    flex-direction: column; /* Stack content vertically on small screens */
-    min-height: 80vh; /* Minimum height for larger screens */
-    position: relative;
+    list-style: none;
+    justify-content: flex-end;
+    color: rgb(14, 14, 14);
 }
 
-@media (min-width: 768px) {
-    .hero {
-        flex-direction: row; /* Change to horizontal stacking on larger screens */
+ul li {
+    margin: 0 15px;
+}
+
+ul li a {
+    color: rgb(14, 14, 14);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    ul {
+        display: none; /* Hide navigation items by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        z-index: 10;
+    }
+
+    ul.active {
+        display: flex; /* Show navigation items when active */
+    }
+
+    ul li {
+        margin: 10px 0;
+        text-align: center;
     }
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(./images/orange-robot-4.png);
-    background-size: contain; /* Changed to cover for better responsiveness */
-    background-position:right center; /* Center the background image */
-    background-repeat: no-repeat;
-    filter: blur(13px); /* Blur the background image */
-    z-index: -1; /* Ensure the blurred background is behind the content */
+/*container style*/
+
+.container {
+    width: 100%; /* Full width of the parent */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Adds space inside the container */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allows items to wrap */
+    overflow: auto; /* Handles overflow */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Responsive font size */
+    }
+}
+
+
+/*Hero style*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff; /* White text for contrast */
+    padding: 200px 50px;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
 }
 
 .hero-content {
-    display: flex;
-    flex-direction: column; /* Stack child elements vertically */
-    justify-content: flex-start; /* Align items at the start */
-    max-width: 90%; /* Use a percentage for better responsiveness */
-    padding: 50px; /* Add padding for spacing */
-     /* Center the content horizontally */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    /* Light background for contrast */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 50%; /* Limit width on larger screens */
 }
 
-/* Optional: Add a media query for better responsiveness on smaller screens */
-@media (max-width: 768px) {
-    .hero-content {
-        padding: 30px; /* Reduce padding on smaller screens */
-    }
+h1 {
+    font-size: 3em; /* Large heading */
+    margin: 0;
 }
 
-.hero h2 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 2.5rem; /* Slightly larger for better visibility */
-    margin-bottom: 1rem; /* Space below the h2 */
+h2 {
+    font-size: 2em; /* Sub-heading */
+    margin: 10px 0;
 }
 
-.hero p {
-    font-size: 1.5rem; /* Base font size */
-    margin-bottom: 2rem; /* Space below the paragraph */
-    line-height: 1.4; /* Increased line height for readability */
-    font-weight: lighter;
-    letter-spacing: 0.5px; /* Reduced letter spacing */
-    font-family: 'Barlow Condensed', sans-serif;
+.hero-desc {
+    font-size: 1.2em; /* Description text */
+    margin: 20px 0;
 }
 
-/* Responsive adjustments */
+.hero-btn {
+    border: 1px solid #ff6600; /* Button color */
+    color: #ff6600; /* Button text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+    
+}
+
+.hero-btn:hover {
+    background-color: #ff6600;
+    color: white; /* Button hover color */
+}
+
+.hero::after {
+    content: '';
+    background-image: url('./images/robottwo.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Only show half on larger screens */
+    z-index: -1; /* Send background image behind content */
+}
+
 @media (max-width: 768px) {
     .hero {
-        padding: 1rem; /* Reduced padding on smaller screens */
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content */
+        text-align: center; /* Center text */
     }
-    
-    .hero h1 {
-        font-size: 3rem; /* Smaller font size for smaller screens */
+
+    .hero-content {
+        max-width: 90%; /* Allow more width on smaller screens */
     }
-    
-    .hero h2 {
-        font-size: 2rem; /* Smaller font size for h2 */
-    }
-    
-    .hero p {
-        font-size: 1.2rem; /* Smaller font size for paragraph */
+
+    .hero::after {
+        left: 0; /* Show full image on smaller screens */
+        width: 100%; /* Full width */
+        height: 50%; /* Adjust height as needed */
     }
 }
 
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2.5rem; /* Further reduce font size on very small screens */
-    }
-    
-    .hero h2 {
-        font-size: 1.8rem; /* Further reduce h2 size */
-    }
-    
-    .hero p {
-        font-size: 1rem; /* Further reduce paragraph size */
-    }
-}
-  
-  .grid-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    width: 160px;
-    grid-template-areas: 
-      "first-box second-box "
-      "third-box third-box";
-  }
-  
+/* About Section */
+.about-section {
+    padding: 2em 1em;
 
-  .wrapper {
-    display: flex;
-  }
-  
-  .btn {
-
-    text-decoration: none;
-    background-color: orange;
-    padding: 10px 20px;
-    color: white;
-    font-size: 20px;
-    font-weight: ;
-    width: 180px;
-    text-align: center;
-    border-radius: 7px;
-  }
-
-  .about {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column;
-    margin-top: 100px;
-    align-items: center; /* Center items vertically */
-margin-bottom: 4em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 2em auto;
+    max-width: 1200px;
 }
 
 .about-content {
+    color: white;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin: 0 auto;
-  }
-
-  .about-content h2{
-    color: white;
-    margin-bottom: 10px;
-    color:orange ;
-  }
-
-  .about-content p {
-    color: #cacaca;
-    margin-bottom: 20px;
-  }
-
-
-  
-  .about-image {
-    width: 40%;
-    height: auto;
-    margin: 20px;
-    display: block; /* Ensures images are displayed as block elements */
-    position: relative; /* Required for the transform to work */
-    animation: moveUpDown 2.5s ease-in-out infinite; /* Adjust duration as needed */
-  }
-
-  @keyframes moveUpDown {
-    0%, 100% {
-        transform: translateY(0); /* Start and end at the original position */
-    }
-    50% {
-        transform: translateY(-20px); /* Move up slightly */
-    }
 }
-  
-  /* For small screens, change the flex direction to column and reverse the order */
-  @media only screen and (max-width: 768px) {
+
+.about-content:nth-child(1) {
+    flex-direction: row; /* First article: description first, image second */
+}
+
+.about-content:nth-child(2) {
+    flex-direction: row-reverse; /* Second article: image first, description second */
+}
+
+.about-content:nth-child(3) {
+    flex-direction: row; /* First article: description first, image second */
+}
+
+.about-content:nth-child(4) {
+    flex-direction: row-reverse; /* Second article: image first, description second */
+}
+
+@media (max-width: 768px) {
     .about-content {
-      flex-direction: column-reverse;
+        flex-direction: column !important; /* Stack elements vertically on smaller screens */
     }
-    .about-image {
-      width: 80%;
-      margin: 20px auto;
-    }
-  }
-
-.about-description {
-    max-width: 100%; /* Control the width of the description */
-    border-bottom: 1px solid orange; /* Omanly add border at the bottom */
-    width: 300px;
-    height: auto;
 }
-
 
 
 
 .about-description {
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
-}
-
-.pricing {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the content */
-    align-items: flex-start; /* Align items at the start */
-    margin: 50px 0; /* Add margin for spacing */
-}
-
-.pricing-content {
-    display: flex; /* Use flexbox for layout */
-    width: 100%; /* Full width */
-    max-width: 1200px; /* Optional: Limit max width */
-}
-
-.pricing-robot {
-    flex: 0 0 auto; /* Prevent the robot image from growing */
-    width: 35%; /* Increase the width of the image container */
-    padding: 20px; /* Add some padding */
-}
-
-.pricing-robot img {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */ /* Set a maximum height for the image */
-    object-fit: cover; /* Maintain aspect ratio */ /* Add rounded corners to the image */
-}
-
-.pricing-box {
-    flex: 1; /* Allow the pricing boxes to take the remaining space */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: row; /* Display pricing boxes side by side */
-    justify-content: space-around; /* Space out the boxes evenly */
-    padding: 20px; /* Add padding */
-}
-
-.price-box {
-    border: 1px solid orange;
-    color: #cacaca; /* Text color */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Add padding */
-    margin: 10px; /* Space between boxes */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    text-align: start; /* Center the text */
-    width: 30%; /* Set a fixed width for each pricing box */
-    transition: transform 0.3s; /* Smooth hover effect */
-}
-
-.price-box h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.price-box p {
-    font-size: ;
-}
-
-.price-box:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-}
-
-.price-box ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-}
-
-.price-box li {
-    /* Dark background for items */
-    border-radius: 5px; /* Rounded corners */
-    margin: 5px 0; /* Space between items */
-    padding: 10px; /* Padding for list items */
-    transition: border-bottom 2s ease-in-out;
-    transition:  2s ease-in-out;
-    border-bottom: 1px solid transparent .9s ease; /* Smooth background color change */
-}
-
-.price-box li:hover {
-    border-bottom: 1px solid orange; /* Lighter background on hover */
-}
-
-.price-container {
-    text-align: center; /* Center the price */
-    margin: 20px 0; /* Add some margin for spacing */
-}
-
-.price {
-    font-size: 2rem; /* Increase font size for a modern look */
-    font-weight: bold; /* Keep the bold weight */
-    color: orange; /* Dark gray color for modern aesthetics */
-    display: inline-block; /* Allow for inline styling */
-}
-
-.abbreviation {
-    font-size: 1rem; /* Smaller font size for the abbreviation */
-    font-weight: normal; /* Normal weight for the abbreviation */
-    color: orange; /* Lighter gray color for contrast */
-    margin-left: 5px; /* Space between price and abbreviation */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .pricing-box {
-        flex-direction: column; /* Stack pricing boxes in a column */
-        align-items: center; /* Center items */
-    }
-
-    .price-box {
-        width: 80%; /* Make boxes wider on smaller screens */
-        margin: 10px 0; /* Space between boxes */
-    }
-
-    .pricing-robot {
-        width: 100%; /* Make the robot image take full width */
-        padding: 10px; /* Reduce padding */
-    }
-}
-
-@media (max-width: 480px) {
-    .price-box {
-        width: 90%; /* Make boxes take more width on very small screens */
-    }
-}
-
-.vision-mission {
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    max-width: 900px;
-    margin: auto; /* White text for readability */
-
-}
-.vision-mission-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between items */
-}
-.vision {
-    flex: 1;
-    min-width: 300px;
-    padding: 25px;
- /* Slightly lighter background for boxes */
-    
-    
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.vision:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.441); /* Stronger shadow on hover */
-}
-h2 {
-    color: #ffcc00; /* Bright accent color for headings */
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 15px;
-}
-p {
-    color: #cacaca; /* Light gray for paragraph text */
-    font-family: 'Arial', sans-serif;
-    line-height: 1.7;
-}
-.additional-content {
-    margin-top: 40px;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-  
-    padding-top: 20px;
-}
-
-
-
-/* Footer Styles */
-.footer {
-    padding: 40px 20px;
-    text-align: left;
-    color: #f0f0f0; /* Light text color */
-    font-family: 'Arial', sans-serif; /* Font family for the footer */
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 220px;
-    margin: 20px;
-    padding: 20px; /* Padding for spacing */
-}
-
-.footer-section h2, .footer-section h3 {
-    margin-top: 0;
-    font-weight: bold;
-    color: #ffcc00; /* Accent color for headings */
-}
-
-.footer-section p {
-    margin: 10px 0;
-    line-height: 1.5; /* Improved readability */
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section li {
-    margin-bottom: 10px;
-}
-
-.footer-section a {
-    color: #f0f0f0;
-    text-decoration: none;
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-.footer-section a:hover {
-    color: #ffcc00; /* Change color on hover */
-    text-decoration: underline; /* Underline on hover for emphasis */
-}
-
-.social-media {
-    display: flex;
-    gap: 15px; /* Space between icons */
-}
-
-.social-media a {
-    padding: 10px 15px;
-    border-radius: 50%; /* Circular buttons */
-    transition: transform 0.3s; /* Smooth scaling effect */
-}
-
-.social-media a:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
-
-.newsletter form {
-    display: flex;
-    flex-direction: column;
-}
-
-.newsletter input[type="email"] {
-    padding: 12px;
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    margin-bottom: 10px;
-    color: #f0f0f0; /* Input text color */
-    background-color: transparent; /* Transparent background */
-}
-
-.newsletter button[type="submit"] {
-    padding: 12px;
-    background-color: transparent; /* No background color */
-    color: #ffcc00; /* Button text color */
-    border: 2px solid #ffcc00; /* Outline for the button */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-}
-
-.newsletter button[type="submit"]:hover {
-    background-color: #ffcc00; /* Background color on hover */
-    color: #1a1a1a; /* Change text color on hover */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-section {
-        flex-basis: 100%; /* Full width for sections */
-        margin: 10px 0; /* Add margin for spacing */
-        text-align: center; /* Center text for smaller screens */
-    }
-
-    .social-media {
-        justify-content: flex-start; /* Center social media icons */
-    }
-
-    .newsletter input[type="email"] {
-        width: 100%; /* Full width for input */
-        margin-bottom: 10px; /* Add margin for spacing */
-    }
-
-    .newsletter button[type="submit"] {
-        width: 100%; /* Full width for button */
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-section {
-        padding: 15px; /* Reduce padding on smaller screens */
-    }
-}
-
-
-/* Testimonials Section */
-.testimonials {
-    padding: 2em;
-    margin: 2em 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonials h2 {
     text-align: center;
     margin-bottom: 1em;
+}
+
+.about-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.about-image-container {
+    display: flex;          /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically (if needed) */
+    margin: 0 auto;
     
 }
-
-.testimonial {
-    margin-bottom: 1.5em;
-    padding: 1em;
-    border-left: 4px solid orange;
+/* Vision & Mission Section */
+.vision-mission {
+    padding: 2em 1em;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 2em auto;
+    max-width: 1200px;
 }
 
-.testimonial p {
-    font-style: italic;
+.vision-mission-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.testimonial h4 {
-    text-align: right;
+.vision, .mission {
+    margin: 1em 0;
+    text-align: center;
+}
+
+h2 {
+    color: #ff6600;
+    margin-bottom: 1em;
+}
+
+h3 {
     color: #555;
 }
 
-/* Portfolio Section */
-.portfolio {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    justify-content: center; /* Centers items horizontally */
-    margin: 2em 0;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio h2 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1em;
-    color: orange;
-}
-
-/* Portfolio Items */
-.portfolio {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap onto the next line */
-    justify-content: center; /* Center the portfolio items */
-    padding: 2em;
-    margin: 2em 0;
-   
-}
-
-.portfolio-item {
-    flex: 1 1 calc(25% - 2em); /* Adjust the width of items */
-    margin: 1em; /* Space between items */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
-    padding: 1.5em; /* Padding inside the card */
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
-    background-color: ; 
-   
-}
-
-.portfolio-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-.portfolio-item h3 {
-    margin: 0.5em 0;
-    color: orange;
-    font-size: 1.5rem; /* Slightly larger font size */
-}
-
-.portfolio-item p {
-    color: #e1e1e1;
-    font-size: 1rem; /* Set a specific font size for better readability */
-}
-
-/* Hover effect */
-.portfolio-item:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-    border-color: orange; /* Change border color on hover */
-}
-
 /* Responsive Styles */
-@media (max-width: 768px) {
-    .portfolio-item {
-        flex: 1 1 calc(50% - 2em); /* Two items per row */
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio-item {
-        flex: 1 1 100%; /* Full width on small screens */
-        margin: 0.5em 0; /* Adjust margin for smaller screens */
-        padding: 1em; /* Adjust padding for smaller screens */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
-    .portfolio-item h3 {
-        font-size: 1.25rem; /* Adjust font size for smaller screens */
+    .about-description {
+        max-width: 50%;
+        padding-right: 1em;
     }
 
-    .portfolio-item p {
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    .about-image {
+        max-width: 50%;
     }
-}
 
-.team {
-    display: flex;
-    flex-wrap: wrap; /* Allow team members to wrap onto the next line */
-    justify-content: center; /* Center the team members */
-    padding: 2em;
-    margin: 2em 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    ; /* Light background for contrast */
-}
-
-.team h2 {
-    text-align: center;
-    margin-bottom: 1em;
-    color: orange;
-    width: 100%; /* Full width for heading */
-}
-
-.team-member {
- /* White background for card effect */
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.195); /* Shadow for depth */
-    margin: 1em;
-    padding: 1.5em; /* Padding inside the card */
-    text-align: center;
-    flex: 1 1 calc(25% - 2em); /* Responsive width for larger screens */
-    transition: transform 0.3s; /* Smooth transform effect */
-    background-color: #1a1a1a;
-   
-}
-
-.team-member p {
-    color: #787878;
-    font-size: 16px;
-    font-weight: 300px;
-}
-
-.team-member:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-}
-
-.team-member h3 {
-    color: orange;
-    margin: 0.5em 0; /* Margin for spacing */
-    font-size: 18px;
-}
-
-.team-member img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .team-member {
-        flex: 1 1 calc(50% - 2em); /* Two cards per row */
-    }
-}
-
-@media (max-width: 480px) {
-    .team-member {
-        flex: 1 1 100%; /* Full width on small screens */
-        margin: 0.5em 0; /* Adjust margin for smaller screens */
-    }
-}
-
-/* FAQs Section */
-.faqs {
-    
-    padding: 2em;
-    margin: 2em 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.faqs h2 {
-    text-align: center;
-    margin-bottom: 1em;
-    color: orange;
-}
-
-.faq {
-    margin-bottom: 1em;
-}
-
-.faq h3 {
-    cursor: pointer;
-    color: orange;
-}
-
-.faq p {
-    margin-top: 0.5em;
-    display: none; /* Hidden by default */
-}
-
-/* Blog Section */
-.blog {
-    
-    padding: 2em;
-    margin: 2em 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.blog h2 {
-    text-align: center;
-    margin-bottom: 1em;
-    color: orange;
-    
-}
-
-.blog-post {
-    margin: 1em 0;
-}
-
-.blog-post h3 a {
-    text-decoration: none;
-    color: orange;
-}
-
-.blog-post p {
-    margin-top: 0.5em;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .team-member {
-        display: inline-block;
-        width: 45%;
-        margin: 2.5%;
-    }
-    
-    .portfolio-item {
-        display: inline-block;
-        width: 45%;
-        margin: 2.5%;
-    }
-}
-
-@media (max-width: 480px) {
-    .team-member,
-    .portfolio-item {
+    .vision-mission-content {
+        flex-direction: row;
+        justify-content: space-around;
         width: 100%;
-        margin: 1em 0;
     }
 
-    .testimonial {
-        padding: 0.5em;
+    .vision, .mission {
+        max-width: 45%;
     }
 }
 
-.contact-us {
-    max-width: 600px; /* Maximum width for the form */
-    margin: 2em auto; /* Center the form horizontally */
-    padding: 2em; /* Padding around the form */
-    border: 1px solid orange;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+/* Button Styles (if applicable) */
+.btn {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.contact-us h2 {
-    text-align: center; /* Centered heading */
-    margin-bottom: 1em; /* Space below the heading */
-    color: whitesmoke;
+.btn:hover {
+    background-color: #0056b3;
 }
 
-.contact-us p {
-    text-align: center; /* Centered paragraph */
-    margin-bottom: 2em; /* Space below the paragraph */
-    color: whitesmoke;
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    padding: 1em 0;
+    text-align: center;
 }
 
-.form-group {
-    margin-bottom: 1.5em; /* Space between form groups */
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.label {
-    display: block; /* Block display for labels */
-    margin-bottom: 0.5em; /* Space below labels */
-    color: white;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%; /* Full width */
-    padding: 0.8em; /* Padding inside inputs */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1em; /* Font size */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-/* Focus styles for inputs and textarea */
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-textarea:focus {
-    border-color: orange; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 5px rgba(255, 238, 0, 0.5); /* Add a subtle shadow on focus */
+.footer a:hover {
+    text-decoration: underline;
 }
