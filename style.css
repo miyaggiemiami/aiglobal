@@ -8,6 +8,12 @@ body {
     background-color:rgb(14, 14, 14) ;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    background-image: url('/images/background.png'); /* Replace with your image URL */
+    background-size: cover; /* Makes the background image cover the entire body */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Fixes the background image in place */
+    height: 100vh;
 }
 
 /*navbar style*/
@@ -17,8 +23,9 @@ body {
     color: rgb(14, 14, 14);
     padding: 10px 20px;
     position: fixed;
-    overflow: hidden;
-    
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav {
@@ -103,6 +110,7 @@ ul li a:hover {
     display: flex; /* Use flexbox for layout */
     flex-wrap: wrap; /* Allows items to wrap */
     overflow: auto; /* Handles overflow */
+    flex-direction: column;
 }
 
 @media (max-width: 768px) {
@@ -111,6 +119,7 @@ ul li a:hover {
         font-size: 0.9rem; /* Responsive font size */
     }
 }
+
 
 
 /*Hero style*/
@@ -127,22 +136,38 @@ ul li a:hover {
 
 .hero-content {
     max-width: 50%; /* Limit width on larger screens */
+    
+} 
+
+
+.hero #heading {
+    font-size: 4rem;
+    text-align: start;
 }
 
-h1 {
-    font-size: 3em; /* Large heading */
-    margin: 0;
+@media (max-width: 768px) {
+    .hero #heading {
+        font-size: 2.5rem;
+        text-align: start;
+        margin: 0 auto;
+    }
 }
 
-h2 {
-    font-size: 2em; /* Sub-heading */
-    margin: 10px 0;
+.sub-heading {
+    text-align: start;
+    color: #858585;
 }
+
+.
+
 
 .hero-desc {
     font-size: 1.2em; /* Description text */
     margin: 20px 0;
+    margin-top: 500px;
+    text-align: start;
 }
+
 
 .hero-btn {
     border: 1px solid #ff6600; /* Button color */
@@ -151,13 +176,22 @@ h2 {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-    margin-top: 30px;
-    
+    margin-top: 2rem; 
+    display: block;
+    max-width: 60%;
 }
 
 .hero-btn:hover {
     background-color: #ff6600;
     color: white; /* Button hover color */
+}
+
+@media (max-width: 768px) {
+    .hero-btn {
+        margin: 20px auto;
+        width: 100%;
+
+    }
 }
 
 .hero::after {
@@ -182,7 +216,7 @@ h2 {
     }
 
     .hero-content {
-        max-width: 90%; /* Allow more width on smaller screens */
+        max-width: 100%; /* Allow more width on smaller screens */
     }
 
     .hero::after {
@@ -195,15 +229,28 @@ h2 {
 /* About Section */
 .about-section {
     padding: 2em 1em;
-
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin: 2em auto;
     max-width: 1200px;
 }
 
+.what-we-do-heading {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .what-we-do-heading{
+        font-size: 2rem;
+    }
+}
+
 .about-content {
     color: white;
     display: flex;
+    text-align: start;
     flex-direction: row;
 }
 
@@ -250,92 +297,265 @@ h2 {
     margin: 0 auto;
     
 }
-/* Vision & Mission Section */
+
 .vision-mission {
-    padding: 2em 1em;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 2em auto;
-    max-width: 1200px;
+    padding: 2em;
+    background: linear-gradient(135deg, #13131300, #ff6600);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 2em auto; /* Centered with margin */
+}
+
+.vision-desc {
+    color: #333;
+}
+
+.vision-heading {
+    color: #ff6600;
 }
 
 .vision-mission-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-between; /* Space between items */
 }
 
-.vision, .mission {
-    margin: 1em 0;
+.vision {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and basis */
+    margin: 1em; /* Margin around each vision block */
+    padding: 1.5em; /* Padding inside each vision block */
+    background-color: #e9ecef; /* Light gray background for the blocks */
+    border-radius: 8px; /* Rounded corners for blocks */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.vision:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+p {
+    color: whitesmoke; /* Slightly lighter text color for paragraphs */
+    line-height: 1.6; /* Increased line height for readability */
+}
+
+@media (max-width: 768px) {
+    .vision-mission-content {
+        flex-direction: column;
+         /* Stack items vertically on smaller screens */
+    }
+    .vision {
+        height: 20px;
+    }
+}
+
+
+
+/*testimonial section*/
+.testimonial-list {
+    display: flex;
+    flex-direction: row; /* Default to row on larger screens */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: space-between; /* Distribute space between items */
+    margin: 0 -10px; /* Adjust for padding on items */
+}
+
+
+.testimonial {
+    flex: 1 1 calc(33.333% - 20px); /* Default to 3 items per row with some space */
+    margin: 10px; /* Space between testimonial cards */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    position: relative;
+    background: linear-gradient(2999deg, #13131300, #ff6600);
+    border-radius: 10px; /* Rounded corners for the testimonial card */
+    padding: 20px; /* Spacing inside the card */
+    margin: 20px; /* Spacing outside the card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+
+}
+
+.testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.testimonial-image {
+    width: 60px; /* Adjust size as needed */
+    height: 60px;
+    object-fit: cover; /* Ensure the image is square */
+    border-radius: 50%; /* Makes the image round */
+    position: absolute;
+    top: 20px; /* Adjust to position the image correctly */
+    left: 20px; /* Adjust to position the image correctly */
+    border: 3px solid white; /* Optional: Adds a white border around the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow to the image */
+    transition: transform 0.3s ease; /* Smooth transition for image hover effect */
+}
+
+.testimonial-image:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+.testimonial:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.testimonial-content {
+    margin-top: 80px; /* Space for the image */
+    font-size: 16px; /* Font size for testimonial text */
+    color: #333; /* Dark text for readability */
+    line-height: 1.5; /* Line height for better readability */
+}
+
+.testimonial-author {
+    margin-top: 10px; /* Space above the author name */
+    font-weight: bold; /* Bold text for author name */
+    color:white; /* Slightly lighter color for the author name */
+}
+
+#testimonials-heading{
     text-align: center;
+    margin-top: 3em;
+    margin-bottom: 20px;
+    color: ;
 }
 
-h2 {
-    color: #ff6600;
-    margin-bottom: 1em;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on medium screens */
+    }
 }
 
-h3 {
-    color: #555;
+@media (max-width: 480px) {
+    .testimonial {
+        flex: 1 1 100%; /* 1 item per row on small screens */
+    }
+}
+
+
+blockquote {
+    font-style: italic;
+    margin: 0 0 10px;
+    color: white;
+}
+
+footer {
+    text-align: right;
+    font-weight: bold;
+}
+
+cite {
+    color: #ffdd57; /* Highlight the author's name */
 }
 
 /* Responsive Styles */
-@media (min-width: 768px) {
-    .about-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .about-description {
-        max-width: 50%;
-        padding-right: 1em;
-    }
-
-    .about-image {
-        max-width: 50%;
-    }
-
-    .vision-mission-content {
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .vision, .mission {
-        max-width: 45%;
+@media (min-width: 600px) {
+    .testimonial-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Button Styles (if applicable) */
-.btn {
-    display: inline-block;
-    padding: 0.75em 1.5em;
-    background-color: #007BFF;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+@media (min-width: 900px) {
+    .testimonial-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.btn:hover {
-    background-color: #0056b3;
+/*portfolio section*/
+.portfolio {
+    max-width: 1200px; /* Set a maximum width for the portfolio section */
+    margin: 40px auto; /* Center the section with margin */
+    padding: 40px; /* Add padding around the section */
+    border: 1px solid #ff6600;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
 }
 
-/* Footer Styles */
-.footer {
-    background-color: #333;
-    color: #ffffff;
-    padding: 1em 0;
-    text-align: center;
+.portfolio h2 {
+    text-align: center; /* Center the title */
+    font-size: 2.8em; /* Larger font size for the title */
+    margin-bottom: 40px; /* Space below the title */
+    color: #ff6600; /* Bright color for the title */
+    font-family: 'Montserrat', sans-serif; /* Font family */
+    text-transform: uppercase; /* Uppercase for a modern touch */
 }
 
-.footer a {
-    color: #ffffff;
-    text-decoration: none;
+.portfolio-list {
+    display: grid; /* Use grid layout for modern design */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Gap between items */
 }
 
-.footer a:hover {
-    text-decoration: underline;
+.portfolio-item {
+    background: linear-gradient(135deg, #13131300, #ff6600);
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    position: relative; /* Position relative for overlay effect */
+    overflow: hidden; /* Hide overflow */
 }
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+.portfolio-item img {
+    width: 100%; /* Full width for images */
+    height: 150px; /* Fixed height for uniformity */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for image hover effect */
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+.portfolio-info {
+    padding: 20px; /* Padding inside the item */
+    text-align: center; /* Center text */
+    color: #ffffff; /* White text color */
+}
+
+.portfolio-info h3 {
+    font-size: 1.5em; /* Font size for project title */
+    margin: 10px 0; /* Margin above and below title */
+    color: white; /* Bright color for titles */
+}
+
+.portfolio-info p {
+    font-size: 0.9em; /* Font size for description */
+    color: #dddddd; /* Light gray color for text */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .portfolio h2 {
+        font-size: 2.2em; /* Adjust title size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio h2 {
+        font-size: 1.8em; /* Further adjust title size on very small screens */
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.2em; /* Adjust project title size */
+    }
+}
+
+.team {
+    margin: 20px 0; /* Add spacing above and below */
+    clear: both; /* Clear any floats */
+    background-color: green;
+}
+/*team section*/
+
+
