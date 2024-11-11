@@ -749,6 +749,254 @@ cite {
         }
     }
 
+    /* FAQ Section */
+.faqs {
+    background: linear-gradient(135deg, #13131300, #ff6600);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.faqs h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.faq {
+    border-bottom: 1px solid #eaeaea;
+    padding: 15px 0;
+}
+
+.faq h3 {
+    color:white;
+    cursor: pointer;
+}
+
+.faq p {
+    margin: 5px 0 0;
+    color: white;
+    margin: 20px 0;
+}
+
+/* Blog Section */
+.blog {
+    background: linear-gradient(135deg, #13131300, #ff6600);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.blog h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.blog-post {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.blog-post:hover {
+    transform: scale(1.02);
+}
+
+.blog-post h3 a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.blog-post p {
+    color: white;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .faqs, .blog {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .faq h3, .blog-post h3 {
+        font-size: 1.2em;
+    }
+
+    .faq p, .blog-post p {
+        font-size: 0.9em;
+    }
+}
+
+
+.contact-us {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 20px; /* Padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px; /* Max width for the form */
+    margin: 0 auto; /* Center the section */
+    font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+.contact-us h2 {
+    color: #333; /* Dark color for the heading */
+    margin-bottom: 20px; /* Space below heading */
+    text-align: center; /* Center align heading */
+}
+
+.contact-us p {
+    color: #555; /* Gray color for paragraph text */
+    text-align: center; /* Center align paragraph */
+    margin-bottom: 30px; /* Space below paragraph */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between form fields */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 12px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in total width */
+    font-size: 16px; /* Font size for inputs */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6600; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.btn {
+    background-color: #ff6600; /* Bright button color */
+    color: white; /* White text for button */
+    padding: 12px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    width: 100%; /* Full width for button */
+}
+
+.btn:hover {
+    background-color: #e65c00; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-us {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+}
+
+
+
+.footer {
+    background: linear-gradient(135deg, #13131300, #ff6600);
+    color: #f0f0f0; /* Light text color for contrast */
+    padding: 40px 20px; /* Padding for spacing */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+}
+
+.footer-content {
+    display: flex; /* Flexbox for side-by-side layout */
+    justify-content: space-between; /* Space between sections */
+    align-items: flex-start; /* Align items at the start */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the footer content */
+}
+
+.footer-section {
+    flex: 1; /* Allow sections to grow equally */
+    min-width: 250px; /* Minimum width for each section */
+    margin: 0 20px; /* Margin between sections */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.footer-section h2, .footer-section h3 {
+    color: #ffcc00; /* Bright heading color for emphasis */
+    margin-bottom: 10px; /* Space below headings */
+    font-weight: normal; /* Lighter font weight for a more elegant look */
+}
+
+.footer-section p {
+    color: #ddd; /* Light gray for paragraph text */
+    margin-bottom: 10px; /* Space below paragraphs */
+}
+
+.footer-section a {
+    color: white; /* Bright link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for link color */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Underline on hover for interaction */
+    color: #fff; /* Change color on hover for emphasis */
+}
+
+.footer-section ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-section ul li {
+    margin-bottom: 8px; /* Space between list items */
+}
+
+.footer-section input[type="email"] {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white; /* Dark background for input */
+    color: #fff; /* White text for input */
+    width: 100%; /* Full width for input */
+}
+
+.footer-section button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600; /* Bright button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background transition */
+    width: 100%; /* Full width for button */
+}
+
+.footer-section button:hover {
+    background-color: #e65c00; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        align-items: center; /* Center align sections */
+    }
+
+    .footer-section {
+        margin: 10px 0; /* Space between stacked sections */
+        text-align: center; /* Center text for smaller screens */
+        width: 100%; /* Full width for sections on small screens */
+    }
+}
 
 
     
