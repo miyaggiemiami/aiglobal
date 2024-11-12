@@ -160,6 +160,7 @@ ul li a:hover {
 
 .
 
+
 .hero-desc {
     font-size: 1.2em;
     margin: 20px 0;
@@ -483,60 +484,62 @@ cite {
 }
 
 .portfolio h2 {
-    text-align: center; 
-    font-size: 2.8em; 
-    margin-bottom: 40px;
-    color: #ff6600; 
-    font-family: 'Montserrat', sans-serif; 
-    text-transform: uppercase;
+    text-align: center; /* Center the title */
+    font-size: 2.8em; /* Larger font size for the title */
+    margin-bottom: 40px; /* Space below the title */
+    color: #ff6600; /* Bright color for the title */
+    font-family: 'Montserrat', sans-serif; /* Font family */
+    text-transform: uppercase; /* Uppercase for a modern touch */
 }
 
 .portfolio-list {
-    display: grid; 
+    display: grid; /* Use grid layout for modern design */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px; 
+    gap: 20px; /* Gap between items */
 }
 
 .portfolio-item {
     background: linear-gradient(135deg, #13131300, #ff6600);
-    border-radius: 10px; 
-    overflow: hidden; 
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    position: relative; 
-    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    position: relative; /* Position relative for overlay effect */
+    overflow: hidden; /* Hide overflow */
 }
 
 .portfolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
 }
 
 .portfolio-item img {
-    width: 100%; 
-    height: 150px; 
-    object-fit: cover; 
-    transition: transform 0.3s ease; 
+    width: 100%; /* Full width for images */
+    height: 150px; /* Fixed height for uniformity */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for image hover effect */
+}
 
 .portfolio-item:hover img {
-    transform: scale(1.1); 
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
 }
 
 .portfolio-info {
-    padding: 20px; 
-    text-align: center; 
-    color: #ffffff; 
+    padding: 20px; /* Padding inside the item */
+    text-align: center; /* Center text */
+    color: #ffffff; /* White text color */
 }
 
 .portfolio-info h3 {
-    margin: 10px 0; 
-    color: white; 
+    font-size: 1.5em; /* Font size for project title */
+    margin: 10px 0; /* Margin above and below title */
+    color: white; /* Bright color for titles */
 }
 
 .portfolio-info p {
-    font-size: 0.9em; 
-    color: #dddddd; 
-    margin: 0;
+    font-size: 0.9em; /* Font size for description */
+    color: #dddddd; /* Light gray color for text */
+    margin: 0; /* Remove default margin */
     text-decoration: none;
 }
 
@@ -573,20 +576,21 @@ cite {
 
 .card-container {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    gap: 20px; 
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: space-between; /* Distribute space between cards */
+    gap: 20px; /* Space between cards */
 }
 
 .card {
-    flex: 1 1 calc(33.333% - 20px); 
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with space */
     background: linear-gradient(135deg, #13131300, #ff6600);
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
     position: relative; /* Position for child elements */
     overflow: hidden; /* Hide overflow */
-    text-align: center; 
+    text-align: center; /* Center text */
+    padding: 20px;
 }
 
 .card:hover {
@@ -594,21 +598,21 @@ cite {
 }
 
 .profile-pic {
-    width: 120px; 
-    height: 120px; 
+    width: 120px; /* Profile picture size */
+    height: 120px; /* Profile picture size */
     object-fit: cover;
-    border-radius: 50%; 
-    margin: 20px auto; 
-    border: 1px solid white 
+    border-radius: 50%; /* Circular profile picture */
+    margin: 20px auto; /* Center the image */
+    border: 1px solid white /* Border for profile picture */
 }
 
 .card-back {
     background: #ff6600; 
     color: white; 
-        color: white;
-        padding: 20px; 
-        border-radius: 10px; 
-        position: absolute; 
+        color: white; /* Text color for back */
+        padding: 20px; /* Padding for back content */
+        border-radius: 10px; /* Rounded corners */
+        position: absolute; /* Position the back card */
         top: 0; 
         left: 0;
         right: 0; 
@@ -646,12 +650,12 @@ cite {
 
     /*pricing section*/
     .wrapper {
-        max-width: 900px; 
-        margin: 5% auto; 
-        padding: 0 15px; 
-        display: flex; 
-        flex-wrap: wrap;
-        justify-content: space-between; /
+        max-width: 900px; /* Set a maximum width */
+        margin: 5% auto; /* Center the wrapper */
+        padding: 0 15px; /* Add some padding */
+        display: flex; /* Use flexbox for layout */
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: space-between; /* Space between items */
     }
     
     .single-price {
@@ -661,11 +665,11 @@ cite {
         box-shadow: 0 0 8px #333;
         text-align: center;
         transition: 0.9s;
-        display: flex; 
-        flex-direction: column; 
-        align-items: center;
-        padding: 20px; 
-        border-radius: 8px; 
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Align items in a column */
+        align-items: center; /* Center items horizontally */
+        padding: 20px; /* Add padding for inner spacing */
+        border-radius: 8px; /* Rounded corners */
     }
     
     .price {
@@ -674,9 +678,9 @@ cite {
         border-radius: 50%;
         border: 2px solid #333;
         margin: 5% auto 0 auto;
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
+        display: flex; /* Use flexbox for centering */
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
     }
     
     .deals {
@@ -844,43 +848,47 @@ cite {
 
 .contact-us h2 {
     color: #333; 
-    margin-bottom: 20px; 
-    text-align: center; /
+    margin-bottom: 20px; /* Space below heading */
+    text-align: center; /* Center align heading */
+}
+
 .contact-us p {
-    color: #555; 
-    text-align: center; 
-    margin-bottom: 30px; 
+    color: #555; /* Gray color for paragraph text */
+    text-align: center; /* Center align paragraph */
+    margin-bottom: 30px; /* Space below paragraph */
 }
 
 .form-group {
-    margin-bottom: 20px; 
+    margin-bottom: 20px; /* Space between form fields */
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    font-size: 16px;
-    transition: border-color 0.3s; 
+    width: 100%; /* Full width for inputs */
+    padding: 12px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in total width */
+    font-size: 16px; /* Font size for inputs */
+    transition: border-color 0.3s; /* Smooth transition for border color */
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #ff6600; 
-    outline: none; 
+    border-color: #ff6600; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
 
 .btn {
-    background-color: #ff6600; 
-    color: white; 
-    padding: 12px 20px; 
-    border: none; 
-    border-radius: 5px;
-    cursor: pointer; 
-    font-size: 16px; 
-    transition: background-color 0.3s; 
-    width: 100%; 
+    background-color: #ff6600; /* Bright button color */
+    color: white; /* White text for button */
+    padding: 12px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    width: 100%; /* Full width for button */
 }
 
 .btn:hover {
