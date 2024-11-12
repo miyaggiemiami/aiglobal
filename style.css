@@ -8,11 +8,10 @@ body {
     background-color:rgb(14, 14, 14) ;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background-image: url('/images/background.png'); /* Replace with your image URL */
-    background-size: cover; /* Makes the background image cover the entire body */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; /* Fixes the background image in place */
+    background-image: url('/images/background.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
@@ -37,7 +36,7 @@ nav {
 }
 
 .logo img {
-    max-height: 50px; /* Adjust as needed */
+    max-height: 50px; 
 }
 
 .hamburger {
@@ -71,7 +70,7 @@ ul li a {
 }
 
 ul li a:hover {
-    color: #ffcc00; /* Highlight color on hover */
+    color: #ffcc00; 
 }
 
 /* Responsive Styles */
@@ -84,7 +83,7 @@ ul li a:hover {
         display: none; /* Hide navigation items by default */
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 60px; 
         right: 0;
         background-color: #333;
         width: 100%;
@@ -104,20 +103,20 @@ ul li a:hover {
 /*container style*/
 
 .container {
-    width: 100%; /* Full width of the parent */
-    max-width: 1200px; /* Maximum width */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Adds space inside the container */
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allows items to wrap */
-    overflow: auto; /* Handles overflow */
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    display: flex;
+    flex-wrap: wrap; 
+    overflow: auto;
     flex-direction: column;
 }
 
 @media (max-width: 768px) {
     .container {
-        padding: 10px; /* Adjust padding for smaller screens */
-        font-size: 0.9rem; /* Responsive font size */
+        padding: 10px; 
+        font-size: 0.9rem; 
     }
 }
 
@@ -128,7 +127,7 @@ ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #ffffff; /* White text for contrast */
+    color: #ffffff; 
     padding: 200px 50px;
     position: relative;
     overflow: hidden;
@@ -161,9 +160,8 @@ ul li a:hover {
 
 .
 
-
 .hero-desc {
-    font-size: 1.2em; /* Description text */
+    font-size: 1.2em;
     margin: 20px 0;
     margin-top: 500px;
     text-align: start;
@@ -171,8 +169,8 @@ ul li a:hover {
 
 
 .hero-btn {
-    border: 1px solid #ff6600; /* Button color */
-    color: #ff6600; /* Button text color */
+    border: 1px solid #ff6600; 
+    color: #ff6600; 
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -205,25 +203,25 @@ ul li a:hover {
     right: 0;
     top: 0;
     bottom: 0;
-    left: 50%; /* Only show half on larger screens */
-    z-index: -1; /* Send background image behind content */
+    left: 50%; 
+    z-index: -1; 
 }
 
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center content */
-        text-align: center; /* Center text */
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
     }
 
     .hero-content {
-        max-width: 100%; /* Allow more width on smaller screens */
+        max-width: 100%; 
     }
 
     .hero::after {
-        left: 0; /* Show full image on smaller screens */
-        width: 100%; /* Full width */
-        height: 50%; /* Adjust height as needed */
+        left: 0; 
+        width: 100%; 
+        height: 50%;
     }
 }
 
@@ -292,9 +290,9 @@ ul li a:hover {
 }
 
 .about-image-container {
-    display: flex;          /* Use flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center;    /* Center vertically (if needed) */
+    display: flex;       
+    justify-content: center; 
+    align-items: center;  
     margin: 0 auto;
     
 }
@@ -303,10 +301,10 @@ ul li a:hover {
     padding: 2em;
     background: linear-gradient(135deg, #13131300, #ff6600);
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    max-width: 1200px; /* Maximum width for larger screens */
-    margin: 2em auto; /* Centered with margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    max-width: 1200px; 
+    margin: 2em auto; 
 }
 
 .vision-desc {
@@ -319,28 +317,28 @@ ul li a:hover {
 
 .vision-mission-content {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    justify-content: space-between; /* Space between items */
+    flex-wrap: wrap;
+    justify-content: space-between; 
 }
 
 .vision {
-    flex: 1 1 300px; /* Flex-grow, flex-shrink, and basis */
-    margin: 1em; /* Margin around each vision block */
-    padding: 1.5em; /* Padding inside each vision block */
-    background-color: #e9ecef; /* Light gray background for the blocks */
-    border-radius: 8px; /* Rounded corners for blocks */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
+    flex: 1 1 300px; 
+    margin: 1em; 
+    padding: 1.5em; 
+    background-color: #e9ecef;
+    border-radius: 8px; 
+    transition: transform 0.3s;
 }
 
 .vision:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+    transform: translateY(-5px); 
 }
 
 
 @media (max-width: 768px) {
     .vision-mission-content {
         flex-direction: column;
-         /* Stack items vertically on smaller screens */
+      
     }
     .vision {
         height: 20px;
@@ -352,24 +350,24 @@ ul li a:hover {
 /*testimonial section*/
 .testimonial-list {
     display: flex;
-    flex-direction: row; /* Default to row on larger screens */
-    flex-wrap: wrap; /* Allow items to wrap onto the next line */
-    justify-content: space-between; /* Distribute space between items */
-    margin: 0 -10px; /* Adjust for padding on items */
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin: 0 -10px;
 }
 
 
 .testimonial {
-    flex: 1 1 calc(33.333% - 20px); /* Default to 3 items per row with some space */
-    margin: 10px; /* Space between testimonial cards */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    flex: 1 1 calc(33.333% - 20px); 
+    margin: 10px; 
+    box-sizing: border-box; 
     position: relative;
     background: linear-gradient(2999deg, #13131300, #ff6600);
-    border-radius: 10px; /* Rounded corners for the testimonial card */
-    padding: 20px; /* Spacing inside the card */
-    margin: 20px; /* Spacing outside the card */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 
 }
 
@@ -379,38 +377,38 @@ ul li a:hover {
 }
 
 .testimonial-image {
-    width: 60px; /* Adjust size as needed */
+    width: 60px; 
     height: 60px;
-    object-fit: cover; /* Ensure the image is square */
-    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; 
+    border-radius: 50%; 
     position: absolute;
-    top: 20px; /* Adjust to position the image correctly */
-    left: 20px; /* Adjust to position the image correctly */
-    border: 3px solid white; /* Optional: Adds a white border around the image */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow to the image */
-    transition: transform 0.3s ease; /* Smooth transition for image hover effect */
+    top: 20px; 
+    left: 20px; 
+    border: 3px solid white; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .testimonial-image:hover {
-    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    transform: scale(1.1); /
 }
 
 .testimonial:hover {
-    transform: translateY(-5px); /* Lift the card on hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); 
 }
 
 .testimonial-content {
-    margin-top: 80px; /* Space for the image */
-    font-size: 16px; /* Font size for testimonial text */
-    color: #333; /* Dark text for readability */
-    line-height: 1.5; /* Line height for better readability */
+    margin-top: 80px;
+    font-size: 16px; 
+    color: white; 
+    line-height: 1.5; 
 }
 
 .testimonial-author {
-    margin-top: 10px; /* Space above the author name */
-    font-weight: bold; /* Bold text for author name */
-    color:white; /* Slightly lighter color for the author name */
+    margin-top: 10px; 
+    font-weight: bold; 
+    color:white; 
 }
 
 #testimonials-heading{
@@ -430,13 +428,13 @@ ul li a:hover {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .testimonial {
-        flex: 1 1 calc(50% - 20px); /* 2 items per row on medium screens */
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
     .testimonial {
-        flex: 1 1 100%; /* 1 item per row on small screens */
+        flex: 1 1 100%; 
     }
 }
 
@@ -453,7 +451,7 @@ footer {
 }
 
 cite {
-    color: #ffdd57; /* Highlight the author's name */
+    color: #ffdd57; 
 }
 
 /* Responsive Styles */
@@ -471,76 +469,74 @@ cite {
 
 /*portfolio section*/
 .portfolio {
-    max-width: 1200px; /* Set a maximum width for the portfolio section */
-    margin: 40px auto; /* Center the section with margin */
-    padding: 40px; /* Add padding around the section */
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 40px; 
     border: 1px solid #ff6600;
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    border-radius: 12px; 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); 
 }
 
 .portfolio-item a {
-    text-decoration: none; /* Remove underline from links */
-    outline: none; /* Remove outline on focus */
+    text-decoration: none; 
+    outline: none;
 }
 
 .portfolio h2 {
-    text-align: center; /* Center the title */
-    font-size: 2.8em; /* Larger font size for the title */
-    margin-bottom: 40px; /* Space below the title */
-    color: #ff6600; /* Bright color for the title */
-    font-family: 'Montserrat', sans-serif; /* Font family */
-    text-transform: uppercase; /* Uppercase for a modern touch */
+    text-align: center; 
+    font-size: 2.8em; 
+    margin-bottom: 40px;
+    color: #ff6600; 
+    font-family: 'Montserrat', sans-serif; 
+    text-transform: uppercase;
 }
 
 .portfolio-list {
-    display: grid; /* Use grid layout for modern design */
+    display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Gap between items */
+    gap: 20px; 
 }
 
 .portfolio-item {
     background: linear-gradient(135deg, #13131300, #ff6600);
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; 
+    overflow: hidden; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-    position: relative; /* Position relative for overlay effect */
-    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    position: relative; 
+    overflow: hidden;
 }
 
 .portfolio-item:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
 }
 
 .portfolio-item img {
-    width: 100%; /* Full width for images */
-    height: 150px; /* Fixed height for uniformity */
-    object-fit: cover; /* Cover to maintain aspect ratio */
-    transition: transform 0.3s ease; /* Smooth transition for image hover effect */
-}
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
 
 .portfolio-item:hover img {
-    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    transform: scale(1.1); 
 }
 
 .portfolio-info {
-    padding: 20px; /* Padding inside the item */
-    text-align: center; /* Center text */
-    color: #ffffff; /* White text color */
+    padding: 20px; 
+    text-align: center; 
+    color: #ffffff; 
 }
 
 .portfolio-info h3 {
-    font-size: 1.5em; /* Font size for project title */
-    margin: 10px 0; /* Margin above and below title */
-    color: white; /* Bright color for titles */
+    margin: 10px 0; 
+    color: white; 
 }
 
 .portfolio-info p {
-    font-size: 0.9em; /* Font size for description */
-    color: #dddddd; /* Light gray color for text */
-    margin: 0; /* Remove default margin */
+    font-size: 0.9em; 
+    color: #dddddd; 
+    margin: 0;
     text-decoration: none;
 }
 
@@ -577,21 +573,20 @@ cite {
 
 .card-container {
     display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap */
-    justify-content: space-between; /* Distribute space between cards */
-    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
 }
 
 .card {
-    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with space */
+    flex: 1 1 calc(33.333% - 20px); 
     background: linear-gradient(135deg, #13131300, #ff6600);
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
     position: relative; /* Position for child elements */
     overflow: hidden; /* Hide overflow */
-    text-align: center; /* Center text */
-    padding: 20px;
+    text-align: center; 
 }
 
 .card:hover {
@@ -599,30 +594,30 @@ cite {
 }
 
 .profile-pic {
-    width: 120px; /* Profile picture size */
-    height: 120px; /* Profile picture size */
+    width: 120px; 
+    height: 120px; 
     object-fit: cover;
-    border-radius: 50%; /* Circular profile picture */
-    margin: 20px auto; /* Center the image */
-    border: 1px solid white /* Border for profile picture */
+    border-radius: 50%; 
+    margin: 20px auto; 
+    border: 1px solid white 
 }
 
 .card-back {
-    background: #ff6600; /* Back background */
-    color: white; /* Text color for back
-        color: white; /* Text color for back */
-        padding: 20px; /* Padding for back content */
-        border-radius: 10px; /* Rounded corners */
-        position: absolute; /* Position the back card */
-        top: 0; /* Align to the top */
-        left: 0; /* Align to the left */
-        right: 0; /* Align to the right */
-        bottom: 0; /* Align to the bottom */
-        display: flex; /* Use flexbox for alignment */
-        align-items: center; /* Center content vertically */
-        justify-content: center; /* Center content horizontally */
-        opacity: 0; /* Hide back card initially */
-        transition: opacity 0.3s; /* Smooth transition for opacity */
+    background: #ff6600; 
+    color: white; 
+        color: white;
+        padding: 20px; 
+        border-radius: 10px; 
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        right: 0; 
+        bottom: 0; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        opacity: 0; 
+        transition: opacity 0.3s; /
     }
     
     .card:hover .card-back {
@@ -651,12 +646,12 @@ cite {
 
     /*pricing section*/
     .wrapper {
-        max-width: 900px; /* Set a maximum width */
-        margin: 5% auto; /* Center the wrapper */
-        padding: 0 15px; /* Add some padding */
-        display: flex; /* Use flexbox for layout */
-        flex-wrap: wrap; /* Allow items to wrap */
-        justify-content: space-between; /* Space between items */
+        max-width: 900px; 
+        margin: 5% auto; 
+        padding: 0 15px; 
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between; /
     }
     
     .single-price {
@@ -666,11 +661,11 @@ cite {
         box-shadow: 0 0 8px #333;
         text-align: center;
         transition: 0.9s;
-        display: flex; /* Use flexbox for centering */
-        flex-direction: column; /* Align items in a column */
-        align-items: center; /* Center items horizontally */
-        padding: 20px; /* Add padding for inner spacing */
-        border-radius: 8px; /* Rounded corners */
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        padding: 20px; 
+        border-radius: 8px; 
     }
     
     .price {
@@ -679,9 +674,9 @@ cite {
         border-radius: 50%;
         border: 2px solid #333;
         margin: 5% auto 0 auto;
-        display: flex; /* Use flexbox for centering */
-        align-items: center; /* Center items vertically */
-        justify-content: center; /* Center items horizontally */
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
     }
     
     .deals {
@@ -838,68 +833,64 @@ cite {
 
 
 .contact-us {
-    background-color: #f9f9f9; /* Light background for contrast */
-    padding: 40px 20px; /* Padding for spacing */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 600px; /* Max width for the form */
-    margin: 0 auto; /* Center the section */
-    font-family: 'Arial', sans-serif; /* Clean font */
+    background-color: #f9f9f9; 
+    padding: 40px 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    margin: 0 auto; 
+    font-family: 'Arial', sans-serif; 
 }
 
 .contact-us h2 {
-    color: #333; /* Dark color for the heading */
-    margin-bottom: 20px; /* Space below heading */
-    text-align: center; /* Center align heading */
-}
-
+    color: #333; 
+    margin-bottom: 20px; 
+    text-align: center; /
 .contact-us p {
-    color: #555; /* Gray color for paragraph text */
-    text-align: center; /* Center align paragraph */
-    margin-bottom: 30px; /* Space below paragraph */
+    color: #555; 
+    text-align: center; 
+    margin-bottom: 30px; 
 }
 
 .form-group {
-    margin-bottom: 20px; /* Space between form fields */
+    margin-bottom: 20px; 
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%; /* Full width for inputs */
-    padding: 12px; /* Padding for inputs */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    box-sizing: border-box; /* Include padding and border in total width */
-    font-size: 16px; /* Font size for inputs */
-    transition: border-color 0.3s; /* Smooth transition for border color */
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px;
+    transition: border-color 0.3s; 
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #ff6600; /* Change border color on focus */
-    outline: none; /* Remove outline */
-}
+    border-color: #ff6600; 
+    outline: none; 
 
 .btn {
-    background-color: #ff6600; /* Bright button color */
-    color: white; /* White text for button */
-    padding: 12px 20px; /* Padding for button */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size for button */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-    width: 100%; /* Full width for button */
+    background-color: #ff6600; 
+    color: white; 
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+    width: 100%; 
 }
 
 .btn:hover {
-    background-color: #e65c00; /* Darker shade on hover */
+    background-color: #e65c00; 
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .contact-us {
-        padding: 20px; /* Reduced padding for smaller screens */
+        padding: 20px; 
     }
 }
 
@@ -907,94 +898,85 @@ cite {
 
 .footer {
     background: linear-gradient(135deg, #13131300, #ff6600);
-    color: #f0f0f0; /* Light text color for contrast */
-    padding: 40px 20px; /* Padding for spacing */
-    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    color: #f0f0f0; 
+    padding: 40px 20px; 
+    font-family: 'Arial', sans-serif; 
 }
 
 .footer-content {
-    display: flex; /* Flexbox for side-by-side layout */
-    justify-content: space-between; /* Space between sections */
-    align-items: flex-start; /* Align items at the start */
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-    max-width: 1200px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the footer content */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-section {
-    flex: 1; /* Allow sections to grow equally */
-    min-width: 250px; /* Minimum width for each section */
-    margin: 0 20px; /* Margin between sections */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    flex: 1;
+    min-width: 250px; 
+    margin: 0 20px;
+    box-sizing: border-box; 
 }
 
 .footer-section h2, .footer-section h3 {
-    color: #ffcc00; /* Bright heading color for emphasis */
-    margin-bottom: 10px; /* Space below headings */
-    font-weight: normal; /* Lighter font weight for a more elegant look */
+    color: #ffcc00; 
+    margin-bottom: 10px; 
+    font-weight: normal; 
 }
 
 .footer-section p {
-    color: #ddd; /* Light gray for paragraph text */
-    margin-bottom: 10px; /* Space below paragraphs */
+    color: #ddd;
+    margin-bottom: 10px; 
 }
 
 .footer-section a {
-    color: white; /* Bright link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth transition for link color */
-}
+    color: white; 
+    transition: color 0.3s; 
 
 .footer-section a:hover {
-    text-decoration: underline; /* Underline on hover for interaction */
-    color: #fff; /* Change color on hover for emphasis */
-}
+    text-decoration: underline; /
 
 .footer-section ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
+    list-style: none; 
+    padding: 0; 
 }
 
 .footer-section ul li {
-    margin-bottom: 8px; /* Space between list items */
-}
+    margin-bottom: 8px; 
 
 .footer-section input[type="email"] {
     padding: 12px;
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-    background-color: white; /* Dark background for input */
-    color: #fff; /* White text for input */
-    width: 100%; /* Full width for input */
-}
+    background-color: white; 
+    color: #fff; 
+    width: 100%; 
 
 .footer-section button {
     padding: 12px;
     border: none;
     border-radius: 5px;
-    background-color: #ff6600; /* Bright button color */
-    color: white;
+    background-color: #ff6600; 
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth background transition */
-    width: 100%; /* Full width for button */
-}
+    transition: background-color 0.3s; 
+    width: 100%; 
 
 .footer-section button:hover {
-    background-color: #e65c00; /* Darker shade on hover */
-}
+    background-color: #e65c00;
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column; /* Stack sections vertically on smaller screens */
-        align-items: center; /* Center align sections */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .footer-section {
-        margin: 10px 0; /* Space between stacked sections */
-        text-align: center; /* Center text for smaller screens */
-        width: 100%; /* Full width for sections on small screens */
+        margin: 10px 0; 
+        text-align: center; 
+        width: 100%;
     }
 }
 
