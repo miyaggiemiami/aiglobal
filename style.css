@@ -214,16 +214,22 @@ ul li a:hover {
         flex-direction: column; /* Stack content vertically */
         align-items: center; /* Center content */
         text-align: center; /* Center text */
+        margin-top: 80px;
     }
 
     .hero-content {
         max-width: 100%; /* Allow more width on smaller screens */
+        margin-top: 300px;
     }
 
     .hero::after {
         left: 0; /* Show full image on smaller screens */
         width: 100%; /* Full width */
         height: 50%; /* Adjust height as needed */
+    }
+
+    .hero-desc {
+        text-align: start;
     }
 }
 
