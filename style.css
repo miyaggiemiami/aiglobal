@@ -8,10 +8,11 @@ body {
     background-color:rgb(14, 14, 14) ;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background-image: url('/images/background.png'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+    background-image: url('/images/background.png'); /* Replace with your image URL */
+    background-size: cover; /* Makes the background image cover the entire body */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Fixes the background image in place */
     height: 100vh;
 }
 
@@ -20,7 +21,7 @@ body {
 .header {
     width: 100%;
     background-color: white;
-    color: rgb(14, 14, 14);
+    color: white;
     padding: 10px 20px;
     position: fixed;
     top: 0;
@@ -36,7 +37,7 @@ nav {
 }
 
 .logo img {
-    max-height: 50px; 
+    max-height: 50px; /* Adjust as needed */
 }
 
 .hamburger {
@@ -70,7 +71,7 @@ ul li a {
 }
 
 ul li a:hover {
-    color: #ffcc00; 
+    color: #ffcc00; /* Highlight color on hover */
 }
 
 /* Responsive Styles */
@@ -83,7 +84,7 @@ ul li a:hover {
         display: none; /* Hide navigation items by default */
         flex-direction: column;
         position: absolute;
-        top: 60px; 
+        top: 60px; /* Adjust based on header height */
         right: 0;
         background-color: #333;
         width: 100%;
@@ -103,20 +104,20 @@ ul li a:hover {
 /*container style*/
 
 .container {
-    width: 100%; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px; 
-    display: flex;
-    flex-wrap: wrap; 
-    overflow: auto;
+    width: 100%; /* Full width of the parent */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Adds space inside the container */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allows items to wrap */
+    overflow: auto; /* Handles overflow */
     flex-direction: column;
 }
 
 @media (max-width: 768px) {
     .container {
-        padding: 10px; 
-        font-size: 0.9rem; 
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Responsive font size */
     }
 }
 
@@ -127,7 +128,7 @@ ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #ffffff; 
+    color: #ffffff; /* White text for contrast */
     padding: 200px 50px;
     position: relative;
     overflow: hidden;
@@ -162,7 +163,7 @@ ul li a:hover {
 
 
 .hero-desc {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Description text */
     margin: 20px 0;
     margin-top: 500px;
     text-align: start;
@@ -170,8 +171,8 @@ ul li a:hover {
 
 
 .hero-btn {
-    border: 1px solid #ff6600; 
-    color: #ff6600; 
+    border: 1px solid #ff6600; /* Button color */
+    color: #ff6600; /* Button text color */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -204,25 +205,25 @@ ul li a:hover {
     right: 0;
     top: 0;
     bottom: 0;
-    left: 50%; 
-    z-index: -1; 
+    left: 50%; /* Only show half on larger screens */
+    z-index: -1; /* Send background image behind content */
 }
 
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content */
+        text-align: center; /* Center text */
     }
 
     .hero-content {
-        max-width: 100%; 
+        max-width: 100%; /* Allow more width on smaller screens */
     }
 
     .hero::after {
-        left: 0; 
-        width: 100%; 
-        height: 50%;
+        left: 0; /* Show full image on smaller screens */
+        width: 100%; /* Full width */
+        height: 50%; /* Adjust height as needed */
     }
 }
 
@@ -234,7 +235,21 @@ ul li a:hover {
     max-width: 1200px;
 }
 
-.what-we-do-heading {
+.paragraph-heading {
+    font-size: 1.5rem;
+    text-align: start;
+    
+}
+
+.about-paragraph {
+    font-size: 16px;
+    text-align: start;
+    line-height: 1.3em;
+    margin-top: 8px;
+    color: #c8c8c8;
+}
+
+.whatWeDo-heading {
     color: white;
     text-align: center;
     font-size: 3rem;
@@ -288,12 +303,26 @@ ul li a:hover {
     height: auto;
     border-radius: 8px;
     margin: 0 auto;
+    margin-bottom: 20px;
+    animation: moveUpDown 3s ease-in-out infinite; /* Adjust duration as needed */
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the distance to move up */
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .about-image-container {
-    display: flex;       
-    justify-content: center; 
-    align-items: center;  
+    display: flex;          /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically (if needed) */
     margin: 0 auto;
     
 }
@@ -302,10 +331,10 @@ ul li a:hover {
     padding: 2em;
     background: linear-gradient(135deg, #13131300, #ff6600);
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px; 
-    max-width: 1200px; 
-    margin: 2em auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 2em auto; /* Centered with margin */
 }
 
 .vision-desc {
@@ -318,28 +347,28 @@ ul li a:hover {
 
 .vision-mission-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-between; /* Space between items */
 }
 
 .vision {
-    flex: 1 1 300px; 
-    margin: 1em; 
-    padding: 1.5em; 
-    background-color: #e9ecef;
-    border-radius: 8px; 
-    transition: transform 0.3s;
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and basis */
+    margin: 1em; /* Margin around each vision block */
+    padding: 1.5em; /* Padding inside each vision block */
+    background-color: #e9ecef; /* Light gray background for the blocks */
+    border-radius: 8px; /* Rounded corners for blocks */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
 }
 
 .vision:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px); /* Lift effect on hover */
 }
 
 
 @media (max-width: 768px) {
     .vision-mission-content {
         flex-direction: column;
-      
+         /* Stack items vertically on smaller screens */
     }
     .vision {
         height: 20px;
@@ -351,24 +380,24 @@ ul li a:hover {
 /*testimonial section*/
 .testimonial-list {
     display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    margin: 0 -10px;
+    flex-direction: row; /* Default to row on larger screens */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: space-between; /* Distribute space between items */
+    margin: 0 -10px; /* Adjust for padding on items */
 }
 
 
 .testimonial {
-    flex: 1 1 calc(33.333% - 20px); 
-    margin: 10px; 
-    box-sizing: border-box; 
+    flex: 1 1 calc(33.333% - 20px); /* Default to 3 items per row with some space */
+    margin: 10px; /* Space between testimonial cards */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
     position: relative;
     background: linear-gradient(2999deg, #13131300, #ff6600);
-    border-radius: 10px; 
-    padding: 20px; 
-    margin: 20px; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border-radius: 10px; /* Rounded corners for the testimonial card */
+    padding: 20px; /* Spacing inside the card */
+    margin: 20px; /* Spacing outside the card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 
 }
 
@@ -378,38 +407,38 @@ ul li a:hover {
 }
 
 .testimonial-image {
-    width: 60px; 
+    width: 60px; /* Adjust size as needed */
     height: 60px;
-    object-fit: cover; 
-    border-radius: 50%; 
+    object-fit: cover; /* Ensure the image is square */
+    border-radius: 50%; /* Makes the image round */
     position: absolute;
-    top: 20px; 
-    left: 20px; 
-    border: 3px solid white; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    top: 20px; /* Adjust to position the image correctly */
+    left: 20px; /* Adjust to position the image correctly */
+    border: 3px solid white; /* Optional: Adds a white border around the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow to the image */
+    transition: transform 0.3s ease; /* Smooth transition for image hover effect */
 }
 
 .testimonial-image:hover {
-    transform: scale(1.1); /
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
 }
 
 .testimonial:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
 .testimonial-content {
-    margin-top: 80px;
-    font-size: 16px; 
-    color: white; 
-    line-height: 1.5; 
+    margin-top: 80px; /* Space for the image */
+    font-size: 16px; /* Font size for testimonial text */
+    color: white; /* Dark text for readability */
+    line-height: 1.5; /* Line height for better readability */
 }
 
 .testimonial-author {
-    margin-top: 10px; 
-    font-weight: bold; 
-    color:white; 
+    margin-top: 10px; /* Space above the author name */
+    font-weight: bold; /* Bold text for author name */
+    color:white; /* Slightly lighter color for the author name */
 }
 
 #testimonials-heading{
@@ -429,13 +458,13 @@ ul li a:hover {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .testimonial {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on medium screens */
     }
 }
 
 @media (max-width: 480px) {
     .testimonial {
-        flex: 1 1 100%; 
+        flex: 1 1 100%; /* 1 item per row on small screens */
     }
 }
 
@@ -452,7 +481,7 @@ footer {
 }
 
 cite {
-    color: #ffdd57; 
+    color: #ffdd57; /* Highlight the author's name */
 }
 
 /* Responsive Styles */
@@ -470,17 +499,17 @@ cite {
 
 /*portfolio section*/
 .portfolio {
-    max-width: 1200px; 
-    margin: 40px auto; 
-    padding: 40px; 
+    max-width: 1200px; /* Set a maximum width for the portfolio section */
+    margin: 40px auto; /* Center the section with margin */
+    padding: 40px; /* Add padding around the section */
     border: 1px solid #ff6600;
-    border-radius: 12px; 
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
 }
 
 .portfolio-item a {
-    text-decoration: none; 
-    outline: none;
+    text-decoration: none; /* Remove underline from links */
+    outline: none; /* Remove outline on focus */
 }
 
 .portfolio h2 {
@@ -607,21 +636,21 @@ cite {
 }
 
 .card-back {
-    background: #ff6600; 
-    color: white; 
+    background: #ff6600; /* Back background */
+    color: white; /* Text color for back
         color: white; /* Text color for back */
         padding: 20px; /* Padding for back content */
         border-radius: 10px; /* Rounded corners */
         position: absolute; /* Position the back card */
-        top: 0; 
-        left: 0;
-        right: 0; 
-        bottom: 0; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        opacity: 0; 
-        transition: opacity 0.3s; /
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        right: 0; /* Align to the right */
+        bottom: 0; /* Align to the bottom */
+        display: flex; /* Use flexbox for alignment */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        opacity: 0; /* Hide back card initially */
+        transition: opacity 0.3s; /* Smooth transition for opacity */
     }
     
     .card:hover .card-back {
@@ -837,23 +866,23 @@ cite {
 
 
 .contact-us {
-    background-color: #f9f9f9; 
-    padding: 40px 20px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    max-width: 600px; 
-    margin: 0 auto; 
-    font-family: 'Arial', sans-serif; 
+    background: linear-gradient(135deg, #13131300, #ff6600);
+    padding: 40px 20px; /* Padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px; /* Max width for the form */
+    margin: 0 auto; /* Center the section */
+    margin-top: 60px;
 }
 
 .contact-us h2 {
-    color: #333; 
+    color: white; /* Dark color for the heading */
     margin-bottom: 20px; /* Space below heading */
     text-align: center; /* Center align heading */
 }
 
 .contact-us p {
-    color: #555; /* Gray color for paragraph text */
+    color: white; /* Gray color for paragraph text */
     text-align: center; /* Center align paragraph */
     margin-bottom: 30px; /* Space below paragraph */
 }
@@ -892,13 +921,13 @@ cite {
 }
 
 .btn:hover {
-    background-color: #e65c00; 
+    background-color: #e65c00; /* Darker shade on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .contact-us {
-        padding: 20px; 
+        padding: 20px; /* Reduced padding for smaller screens */
     }
 }
 
@@ -906,85 +935,96 @@ cite {
 
 .footer {
     background: linear-gradient(135deg, #13131300, #ff6600);
-    color: #f0f0f0; 
-    padding: 40px 20px; 
-    font-family: 'Arial', sans-serif; 
+    color: white; /* Light text color for contrast */
+    padding: 150px 20px; /* Padding for spacing */
+    width: 100%;
+    margin-top: 60px;
 }
 
 .footer-content {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: flex-start; 
-    flex-wrap: wrap; 
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex; /* Flexbox for side-by-side layout */
+    justify-content: space-between; /* Space between sections */
+    align-items: flex-start; /* Align items at the start */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the footer content */
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 250px; 
-    margin: 0 20px;
-    box-sizing: border-box; 
+    flex: 1; /* Allow sections to grow equally */
+    min-width: 250px; /* Minimum width for each section */
+    margin: 0 20px; /* Margin between sections */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .footer-section h2, .footer-section h3 {
-    color: #ffcc00; 
-    margin-bottom: 10px; 
-    font-weight: normal; 
+    color: #ffcc00; /* Bright heading color for emphasis */
+    margin-bottom: 10px; /* Space below headings */
+    font-weight: normal; /* Lighter font weight for a more elegant look */
 }
 
 .footer-section p {
-    color: #ddd;
-    margin-bottom: 10px; 
+    color: rgb(255, 255, 255); /* Light gray for paragraph text */
+    margin-bottom: 10px; /* Space below paragraphs */
+    font-weight: 100;
 }
 
 .footer-section a {
-    color: white; 
-    transition: color 0.3s; 
+    color: white; /* Bright link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for link color */
+}
 
 .footer-section a:hover {
-    text-decoration: underline; /
+    text-decoration: underline; /* Underline on hover for interaction */
+    color: #fff; /* Change color on hover for emphasis */
+}
 
 .footer-section ul {
-    list-style: none; 
-    padding: 0; 
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
 }
 
 .footer-section ul li {
-    margin-bottom: 8px; 
+    margin-bottom: 8px; /* Space between list items */
+}
 
 .footer-section input[type="email"] {
     padding: 12px;
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-    background-color: white; 
-    color: #fff; 
-    width: 100%; 
+    background-color: white; /* Dark background for input */
+    color: #fff; /* White text for input */
+    width: 100%; /* Full width for input */
+}
 
 .footer-section button {
     padding: 12px;
     border: none;
     border-radius: 5px;
-    background-color: #ff6600; 
+    background-color: #ff6600; /* Bright button color */
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s; 
-    width: 100%; 
+    transition: background-color 0.3s; /* Smooth background transition */
+    width: 100%; /* Full width for button */
+}
 
 .footer-section button:hover {
-    background-color: #e65c00;
+    background-color: #e65c00; /* Darker shade on hover */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        align-items: center; /* Center align sections */
     }
 
     .footer-section {
-        margin: 10px 0; 
-        text-align: center; 
-        width: 100%;
+        margin: 10px 0; /* Space between stacked sections */
+        text-align: center; /* Center text for smaller screens */
+        width: 100%; /* Full width for sections on small screens */
     }
 }
 
