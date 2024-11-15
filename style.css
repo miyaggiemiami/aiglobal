@@ -49,7 +49,7 @@ nav {
     display: block;
     width: 25px;
     height: 3px;
-    background-color:rgb(14, 14, 14);
+    background-color:#ff6600;
     margin: 5px;
 }
 
@@ -68,10 +68,11 @@ ul li a {
     color: rgb(14, 14, 14);
     text-decoration: none;
     transition: color 0.3s;
+    color: white;
 }
 
 ul li a:hover {
-    color: #ffcc00; /* Highlight color on hover */
+    color: rgb(150, 150, 150); /* Highlight color on hover */
 }
 
 /* Responsive Styles */
@@ -86,9 +87,10 @@ ul li a:hover {
         position: absolute;
         top: 60px; /* Adjust based on header height */
         right: 0;
-        background-color: #333;
+        background: linear-gradient(135deg, #000000, #ff6600);
         width: 100%;
         z-index: 10;
+        padding: 45px 0;
     }
 
     ul.active {
@@ -98,6 +100,7 @@ ul li a:hover {
     ul li {
         margin: 10px 0;
         text-align: center;
+        color: white;
     }
 }
 
@@ -207,6 +210,7 @@ ul li a:hover {
     bottom: 0;
     left: 50%; /* Only show half on larger screens */
     z-index: -1; /* Send background image behind content */
+    margin-top: 50px;
 }
 
 @media (max-width: 768px) {
@@ -219,13 +223,14 @@ ul li a:hover {
 
     .hero-content {
         max-width: 100%; /* Allow more width on smaller screens */
-        margin-top: 300px;
+        margin-top: 350px;
     }
 
     .hero::after {
         left: 0; /* Show full image on smaller screens */
         width: 100%; /* Full width */
         height: 50%; /* Adjust height as needed */
+        margin-top: 0px;
     }
 
     .hero-desc {
@@ -688,7 +693,7 @@ cite {
         max-width: 900px; /* Set a maximum width */
         margin: 5% auto; /* Center the wrapper */
         padding: 0 15px; /* Add some padding */
-        display: flex; /* Use flexbox for layout */
+        display: flex; /* Use flexbox for layout  
         flex-wrap: wrap; /* Allow items to wrap */
         justify-content: space-between; /* Space between items */
     }
